@@ -3,9 +3,9 @@
 --
 
 -- Dumped from database version 9.6.13
--- Dumped by pg_dump version 13.0
+-- Dumped by pg_dump version 9.6.13
 
--- Started on 2020-11-19 17:17:37
+-- Started on 2021-05-05 02:28:56 CEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -17,6 +17,32 @@ SET check_function_bodies = false;
 SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
+
+--
+-- TOC entry 2920 (class 0 OID 0)
+-- Dependencies: 3
+-- Name: SCHEMA "public"; Type: COMMENT; Schema: -; Owner: postgres
+--
+
+COMMENT ON SCHEMA "public" IS 'standard public schema';
+
+
+--
+-- TOC entry 1 (class 3079 OID 12393)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS "plpgsql" WITH SCHEMA "pg_catalog";
+
+
+--
+-- TOC entry 2921 (class 0 OID 0)
+-- Dependencies: 1
+-- Name: EXTENSION "plpgsql"; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION "plpgsql" IS 'PL/pgSQL procedural language';
+
 
 --
 -- TOC entry 346 (class 1255 OID 319514)
@@ -4867,6 +4893,8 @@ ALTER FUNCTION "public"."upsert"("sql_insert" "text", "sql_update" "text") OWNER
 
 SET default_tablespace = '';
 
+SET default_with_oids = false;
+
 --
 -- TOC entry 185 (class 1259 OID 316880)
 -- Name: Cantieri; Type: TABLE; Schema: public; Owner: postgres
@@ -4884,7 +4912,7 @@ CREATE TABLE "public"."Cantieri" (
 ALTER TABLE "public"."Cantieri" OWNER TO "postgres";
 
 --
--- TOC entry 2919 (class 0 OID 0)
+-- TOC entry 2922 (class 0 OID 0)
 -- Dependencies: 185
 -- Name: TABLE "Cantieri"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -4893,7 +4921,7 @@ COMMENT ON TABLE "public"."Cantieri" IS 'Tabella contenente l''elenco dei cantie
 
 
 --
--- TOC entry 2920 (class 0 OID 0)
+-- TOC entry 2923 (class 0 OID 0)
 -- Dependencies: 185
 -- Name: COLUMN "Cantieri"."Layer0"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -4902,7 +4930,7 @@ COMMENT ON COLUMN "public"."Cantieri"."Layer0" IS 'Layer0 del cantiere';
 
 
 --
--- TOC entry 2921 (class 0 OID 0)
+-- TOC entry 2924 (class 0 OID 0)
 -- Dependencies: 185
 -- Name: COLUMN "Cantieri"."Numero"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -4911,7 +4939,7 @@ COMMENT ON COLUMN "public"."Cantieri"."Numero" IS 'Numero progressivo del cantie
 
 
 --
--- TOC entry 2922 (class 0 OID 0)
+-- TOC entry 2925 (class 0 OID 0)
 -- Dependencies: 185
 -- Name: COLUMN "Cantieri"."DataInizio"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -4920,7 +4948,7 @@ COMMENT ON COLUMN "public"."Cantieri"."DataInizio" IS 'Data apertura del cantier
 
 
 --
--- TOC entry 2923 (class 0 OID 0)
+-- TOC entry 2926 (class 0 OID 0)
 -- Dependencies: 185
 -- Name: COLUMN "Cantieri"."DataFine"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -4929,7 +4957,7 @@ COMMENT ON COLUMN "public"."Cantieri"."DataFine" IS 'Data chiusura del cantiere'
 
 
 --
--- TOC entry 2924 (class 0 OID 0)
+-- TOC entry 2927 (class 0 OID 0)
 -- Dependencies: 185
 -- Name: COLUMN "Cantieri"."Note"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -4956,7 +4984,7 @@ CREATE TABLE "public"."Categorie" (
 ALTER TABLE "public"."Categorie" OWNER TO "postgres";
 
 --
--- TOC entry 2925 (class 0 OID 0)
+-- TOC entry 2928 (class 0 OID 0)
 -- Dependencies: 186
 -- Name: TABLE "Categorie"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -4965,7 +4993,7 @@ COMMENT ON TABLE "public"."Categorie" IS 'Lista delle categorie';
 
 
 --
--- TOC entry 2926 (class 0 OID 0)
+-- TOC entry 2929 (class 0 OID 0)
 -- Dependencies: 186
 -- Name: COLUMN "Categorie"."Nome"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -4974,7 +5002,7 @@ COMMENT ON COLUMN "public"."Categorie"."Nome" IS 'Titolo delle categorie';
 
 
 --
--- TOC entry 2927 (class 0 OID 0)
+-- TOC entry 2930 (class 0 OID 0)
 -- Dependencies: 186
 -- Name: COLUMN "Categorie"."ColorR"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -4983,7 +5011,7 @@ COMMENT ON COLUMN "public"."Categorie"."ColorR" IS 'Colore red';
 
 
 --
--- TOC entry 2928 (class 0 OID 0)
+-- TOC entry 2931 (class 0 OID 0)
 -- Dependencies: 186
 -- Name: COLUMN "Categorie"."ColorG"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -4992,7 +5020,7 @@ COMMENT ON COLUMN "public"."Categorie"."ColorG" IS 'Colore green';
 
 
 --
--- TOC entry 2929 (class 0 OID 0)
+-- TOC entry 2932 (class 0 OID 0)
 -- Dependencies: 186
 -- Name: COLUMN "Categorie"."ColorB"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5001,7 +5029,7 @@ COMMENT ON COLUMN "public"."Categorie"."ColorB" IS 'Colore blue';
 
 
 --
--- TOC entry 2930 (class 0 OID 0)
+-- TOC entry 2933 (class 0 OID 0)
 -- Dependencies: 186
 -- Name: COLUMN "Categorie"."ColorA"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5010,7 +5038,7 @@ COMMENT ON COLUMN "public"."Categorie"."ColorA" IS 'Canale Alpha del colore';
 
 
 --
--- TOC entry 2931 (class 0 OID 0)
+-- TOC entry 2934 (class 0 OID 0)
 -- Dependencies: 186
 -- Name: COLUMN "Categorie"."CodiceGruppo"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5034,7 +5062,7 @@ CREATE SEQUENCE "public"."Categorie_Codice_seq"
 ALTER TABLE "public"."Categorie_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 2932 (class 0 OID 0)
+-- TOC entry 2935 (class 0 OID 0)
 -- Dependencies: 187
 -- Name: Categorie_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -5073,7 +5101,7 @@ CREATE TABLE "public"."FileExtra" (
 ALTER TABLE "public"."FileExtra" OWNER TO "postgres";
 
 --
--- TOC entry 2933 (class 0 OID 0)
+-- TOC entry 2936 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: TABLE "FileExtra"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5082,7 +5110,7 @@ COMMENT ON TABLE "public"."FileExtra" IS 'Tabella contenente tutto il materiale 
 
 
 --
--- TOC entry 2934 (class 0 OID 0)
+-- TOC entry 2937 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."Filename"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5091,7 +5119,7 @@ COMMENT ON COLUMN "public"."FileExtra"."Filename" IS 'Percorso relativo del file
 
 
 --
--- TOC entry 2935 (class 0 OID 0)
+-- TOC entry 2938 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."Tipo"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5100,7 +5128,7 @@ COMMENT ON COLUMN "public"."FileExtra"."Tipo" IS 'Tipo del file';
 
 
 --
--- TOC entry 2936 (class 0 OID 0)
+-- TOC entry 2939 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."TipoRiferimento"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5109,7 +5137,7 @@ COMMENT ON COLUMN "public"."FileExtra"."TipoRiferimento" IS 'Associazione alla "
 
 
 --
--- TOC entry 2937 (class 0 OID 0)
+-- TOC entry 2940 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."ValoreRiferimento"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5118,7 +5146,7 @@ COMMENT ON COLUMN "public"."FileExtra"."ValoreRiferimento" IS 'Riferimento';
 
 
 --
--- TOC entry 2938 (class 0 OID 0)
+-- TOC entry 2941 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."Qualità"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5131,7 +5159,7 @@ COMMENT ON COLUMN "public"."FileExtra"."Qualità" IS '0 -> originale
 
 
 --
--- TOC entry 2939 (class 0 OID 0)
+-- TOC entry 2942 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."file"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5140,7 +5168,7 @@ COMMENT ON COLUMN "public"."FileExtra"."file" IS 'File (memorizzato come bytea)'
 
 
 --
--- TOC entry 2940 (class 0 OID 0)
+-- TOC entry 2943 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."DataScatto"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5149,7 +5177,7 @@ COMMENT ON COLUMN "public"."FileExtra"."DataScatto" IS 'Data dello scatto';
 
 
 --
--- TOC entry 2941 (class 0 OID 0)
+-- TOC entry 2944 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."Descrizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5158,7 +5186,7 @@ COMMENT ON COLUMN "public"."FileExtra"."Descrizione" IS 'Descrizione dle materia
 
 
 --
--- TOC entry 2942 (class 0 OID 0)
+-- TOC entry 2945 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."Permessi_lvl1"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5167,7 +5195,7 @@ COMMENT ON COLUMN "public"."FileExtra"."Permessi_lvl1" IS 'Permesso livello 1 (p
 
 
 --
--- TOC entry 2943 (class 0 OID 0)
+-- TOC entry 2946 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."Permessi_lvl2"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5176,7 +5204,7 @@ COMMENT ON COLUMN "public"."FileExtra"."Permessi_lvl2" IS 'Permesso livello 2 (a
 
 
 --
--- TOC entry 2944 (class 0 OID 0)
+-- TOC entry 2947 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."Permessi_lvl3"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5185,7 +5213,7 @@ COMMENT ON COLUMN "public"."FileExtra"."Permessi_lvl3" IS 'Permessi livello 3 - 
 
 
 --
--- TOC entry 2945 (class 0 OID 0)
+-- TOC entry 2948 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."Proprietario"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5194,7 +5222,7 @@ COMMENT ON COLUMN "public"."FileExtra"."Proprietario" IS 'Proprietario del file'
 
 
 --
--- TOC entry 2946 (class 0 OID 0)
+-- TOC entry 2949 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."Gruppo"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5203,7 +5231,7 @@ COMMENT ON COLUMN "public"."FileExtra"."Gruppo" IS 'Gruppo di proprietà del fil
 
 
 --
--- TOC entry 2947 (class 0 OID 0)
+-- TOC entry 2950 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."LastModified"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5212,7 +5240,7 @@ COMMENT ON COLUMN "public"."FileExtra"."LastModified" IS 'Data dell''ultima modi
 
 
 --
--- TOC entry 2948 (class 0 OID 0)
+-- TOC entry 2951 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: COLUMN "FileExtra"."LastUpdateBy"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5221,7 +5249,7 @@ COMMENT ON COLUMN "public"."FileExtra"."LastUpdateBy" IS 'Utente che ha effettua
 
 
 --
--- TOC entry 265 (class 1259 OID 378875)
+-- TOC entry 264 (class 1259 OID 378875)
 -- Name: GisLayers; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -5246,8 +5274,8 @@ CREATE TABLE "public"."GisLayers" (
 ALTER TABLE "public"."GisLayers" OWNER TO "postgres";
 
 --
--- TOC entry 2949 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2952 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: TABLE "GisLayers"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5255,8 +5283,8 @@ COMMENT ON TABLE "public"."GisLayers" IS 'Lista dei Layer del GIS';
 
 
 --
--- TOC entry 2950 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2953 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: COLUMN "GisLayers"."Group"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5264,8 +5292,8 @@ COMMENT ON COLUMN "public"."GisLayers"."Group" IS 'Gruppo del layer';
 
 
 --
--- TOC entry 2951 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2954 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: COLUMN "GisLayers"."Name"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5273,8 +5301,8 @@ COMMENT ON COLUMN "public"."GisLayers"."Name" IS 'Nome del layer';
 
 
 --
--- TOC entry 2952 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2955 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: COLUMN "GisLayers"."url"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5282,8 +5310,8 @@ COMMENT ON COLUMN "public"."GisLayers"."url" IS 'url del server';
 
 
 --
--- TOC entry 2953 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2956 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: COLUMN "GisLayers"."Tipo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5291,8 +5319,8 @@ COMMENT ON COLUMN "public"."GisLayers"."Tipo" IS 'Tipo del layer';
 
 
 --
--- TOC entry 2954 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2957 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: COLUMN "GisLayers"."Format"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5300,8 +5328,8 @@ COMMENT ON COLUMN "public"."GisLayers"."Format" IS 'Formato del dato';
 
 
 --
--- TOC entry 2955 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2958 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: COLUMN "GisLayers"."Workspace"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5309,8 +5337,8 @@ COMMENT ON COLUMN "public"."GisLayers"."Workspace" IS 'Workspace del geoserver';
 
 
 --
--- TOC entry 2956 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2959 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: COLUMN "GisLayers"."Store"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5318,8 +5346,8 @@ COMMENT ON COLUMN "public"."GisLayers"."Store" IS 'Store del geoserver';
 
 
 --
--- TOC entry 2957 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2960 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: COLUMN "GisLayers"."Layer"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5327,8 +5355,8 @@ COMMENT ON COLUMN "public"."GisLayers"."Layer" IS 'Layer del geoserver';
 
 
 --
--- TOC entry 2958 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2961 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: COLUMN "GisLayers"."Title"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5336,8 +5364,8 @@ COMMENT ON COLUMN "public"."GisLayers"."Title" IS 'Title del layer del geoserver
 
 
 --
--- TOC entry 2959 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2962 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: COLUMN "GisLayers"."Style"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5345,8 +5373,8 @@ COMMENT ON COLUMN "public"."GisLayers"."Style" IS 'Stile';
 
 
 --
--- TOC entry 2960 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2963 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: COLUMN "GisLayers"."Visible"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5354,8 +5382,8 @@ COMMENT ON COLUMN "public"."GisLayers"."Visible" IS 'Indica se è inizialmente v
 
 
 --
--- TOC entry 2961 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2964 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: COLUMN "GisLayers"."DeclaredSRS"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5363,8 +5391,8 @@ COMMENT ON COLUMN "public"."GisLayers"."DeclaredSRS" IS 'Declared SRS nel geoser
 
 
 --
--- TOC entry 2962 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2965 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: COLUMN "GisLayers"."OrderInsideGroup"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5372,8 +5400,8 @@ COMMENT ON COLUMN "public"."GisLayers"."OrderInsideGroup" IS 'Numero di ordiname
 
 
 --
--- TOC entry 2963 (class 0 OID 0)
--- Dependencies: 265
+-- TOC entry 2966 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: COLUMN "GisLayers"."Opacity"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5381,7 +5409,7 @@ COMMENT ON COLUMN "public"."GisLayers"."Opacity" IS 'Opacità (tra 0 e 1) di par
 
 
 --
--- TOC entry 264 (class 1259 OID 378852)
+-- TOC entry 263 (class 1259 OID 378852)
 -- Name: GisSettings; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -5397,8 +5425,8 @@ CREATE TABLE "public"."GisSettings" (
 ALTER TABLE "public"."GisSettings" OWNER TO "postgres";
 
 --
--- TOC entry 2964 (class 0 OID 0)
--- Dependencies: 264
+-- TOC entry 2967 (class 0 OID 0)
+-- Dependencies: 263
 -- Name: TABLE "GisSettings"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5406,8 +5434,8 @@ COMMENT ON TABLE "public"."GisSettings" IS 'Tabella che contiene i vari settings
 
 
 --
--- TOC entry 2965 (class 0 OID 0)
--- Dependencies: 264
+-- TOC entry 2968 (class 0 OID 0)
+-- Dependencies: 263
 -- Name: COLUMN "GisSettings"."Key"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5415,8 +5443,8 @@ COMMENT ON COLUMN "public"."GisSettings"."Key" IS 'Chiave del setting';
 
 
 --
--- TOC entry 2966 (class 0 OID 0)
--- Dependencies: 264
+-- TOC entry 2969 (class 0 OID 0)
+-- Dependencies: 263
 -- Name: COLUMN "GisSettings"."TextValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5424,8 +5452,8 @@ COMMENT ON COLUMN "public"."GisSettings"."TextValue" IS 'Valore testo del settin
 
 
 --
--- TOC entry 2967 (class 0 OID 0)
--- Dependencies: 264
+-- TOC entry 2970 (class 0 OID 0)
+-- Dependencies: 263
 -- Name: COLUMN "GisSettings"."IntValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5433,8 +5461,8 @@ COMMENT ON COLUMN "public"."GisSettings"."IntValue" IS 'Valore integer del setti
 
 
 --
--- TOC entry 2968 (class 0 OID 0)
--- Dependencies: 264
+-- TOC entry 2971 (class 0 OID 0)
+-- Dependencies: 263
 -- Name: COLUMN "GisSettings"."RealValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5442,8 +5470,8 @@ COMMENT ON COLUMN "public"."GisSettings"."RealValue" IS 'Valore real del setting
 
 
 --
--- TOC entry 2969 (class 0 OID 0)
--- Dependencies: 264
+-- TOC entry 2972 (class 0 OID 0)
+-- Dependencies: 263
 -- Name: COLUMN "GisSettings"."BoolValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -5451,7 +5479,7 @@ COMMENT ON COLUMN "public"."GisSettings"."BoolValue" IS 'Valore boolean del sett
 
 
 --
--- TOC entry 266 (class 1259 OID 385944)
+-- TOC entry 265 (class 1259 OID 385944)
 -- Name: GisTables; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -5478,7 +5506,7 @@ CREATE TABLE "public"."GruppiCategorie" (
 ALTER TABLE "public"."GruppiCategorie" OWNER TO "postgres";
 
 --
--- TOC entry 2970 (class 0 OID 0)
+-- TOC entry 2973 (class 0 OID 0)
 -- Dependencies: 189
 -- Name: TABLE "GruppiCategorie"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5487,7 +5515,7 @@ COMMENT ON TABLE "public"."GruppiCategorie" IS 'Gruppi delle categorie';
 
 
 --
--- TOC entry 2971 (class 0 OID 0)
+-- TOC entry 2974 (class 0 OID 0)
 -- Dependencies: 189
 -- Name: COLUMN "GruppiCategorie"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5496,7 +5524,7 @@ COMMENT ON COLUMN "public"."GruppiCategorie"."Codice" IS 'Codice del gruppo';
 
 
 --
--- TOC entry 2972 (class 0 OID 0)
+-- TOC entry 2975 (class 0 OID 0)
 -- Dependencies: 189
 -- Name: COLUMN "GruppiCategorie"."Nome"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5520,7 +5548,7 @@ CREATE SEQUENCE "public"."GruppiCategorie_Codice_seq"
 ALTER TABLE "public"."GruppiCategorie_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 2973 (class 0 OID 0)
+-- TOC entry 2976 (class 0 OID 0)
 -- Dependencies: 190
 -- Name: GruppiCategorie_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -5547,7 +5575,7 @@ CREATE TABLE "public"."Import" (
 ALTER TABLE "public"."Import" OWNER TO "postgres";
 
 --
--- TOC entry 2974 (class 0 OID 0)
+-- TOC entry 2977 (class 0 OID 0)
 -- Dependencies: 191
 -- Name: TABLE "Import"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5556,7 +5584,7 @@ COMMENT ON TABLE "public"."Import" IS 'Tabella contenente le liste di importazio
 
 
 --
--- TOC entry 2975 (class 0 OID 0)
+-- TOC entry 2978 (class 0 OID 0)
 -- Dependencies: 191
 -- Name: COLUMN "Import"."User"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5565,7 +5593,7 @@ COMMENT ON COLUMN "public"."Import"."User" IS 'Nome dell''utente';
 
 
 --
--- TOC entry 2976 (class 0 OID 0)
+-- TOC entry 2979 (class 0 OID 0)
 -- Dependencies: 191
 -- Name: COLUMN "Import"."CodiceOggetto"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5574,7 +5602,7 @@ COMMENT ON COLUMN "public"."Import"."CodiceOggetto" IS 'Codice dell''oggetto da 
 
 
 --
--- TOC entry 2977 (class 0 OID 0)
+-- TOC entry 2980 (class 0 OID 0)
 -- Dependencies: 191
 -- Name: COLUMN "Import"."CodiceVersione"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5583,7 +5611,7 @@ COMMENT ON COLUMN "public"."Import"."CodiceVersione" IS 'Codice dell''oggetto+ve
 
 
 --
--- TOC entry 2978 (class 0 OID 0)
+-- TOC entry 2981 (class 0 OID 0)
 -- Dependencies: 191
 -- Name: COLUMN "Import"."CodiceModello"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5592,7 +5620,7 @@ COMMENT ON COLUMN "public"."Import"."CodiceModello" IS 'Codice del modello da im
 
 
 --
--- TOC entry 2979 (class 0 OID 0)
+-- TOC entry 2982 (class 0 OID 0)
 -- Dependencies: 191
 -- Name: COLUMN "Import"."Colore"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5601,7 +5629,7 @@ COMMENT ON COLUMN "public"."Import"."Colore" IS 'Codice del colore da associare 
 
 
 --
--- TOC entry 2980 (class 0 OID 0)
+-- TOC entry 2983 (class 0 OID 0)
 -- Dependencies: 191
 -- Name: COLUMN "Import"."readonly"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5610,7 +5638,7 @@ COMMENT ON COLUMN "public"."Import"."readonly" IS 'Identifica se importato in so
 
 
 --
--- TOC entry 2981 (class 0 OID 0)
+-- TOC entry 2984 (class 0 OID 0)
 -- Dependencies: 191
 -- Name: COLUMN "Import"."NewAdded"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5633,7 +5661,7 @@ CREATE TABLE "public"."InterventiSubVersion" (
 ALTER TABLE "public"."InterventiSubVersion" OWNER TO "postgres";
 
 --
--- TOC entry 2982 (class 0 OID 0)
+-- TOC entry 2985 (class 0 OID 0)
 -- Dependencies: 192
 -- Name: COLUMN "InterventiSubVersion"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5642,7 +5670,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion"."Codice" IS 'Codice dell''inte
 
 
 --
--- TOC entry 2983 (class 0 OID 0)
+-- TOC entry 2986 (class 0 OID 0)
 -- Dependencies: 192
 -- Name: COLUMN "InterventiSubVersion"."Data"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5651,7 +5679,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion"."Data" IS 'Data dell''interven
 
 
 --
--- TOC entry 2984 (class 0 OID 0)
+-- TOC entry 2987 (class 0 OID 0)
 -- Dependencies: 192
 -- Name: COLUMN "InterventiSubVersion"."CreatedBy"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5673,7 +5701,7 @@ CREATE TABLE "public"."InterventiSubVersion_CategorieSchede" (
 ALTER TABLE "public"."InterventiSubVersion_CategorieSchede" OWNER TO "postgres";
 
 --
--- TOC entry 2985 (class 0 OID 0)
+-- TOC entry 2988 (class 0 OID 0)
 -- Dependencies: 193
 -- Name: COLUMN "InterventiSubVersion_CategorieSchede"."CodiceScheda"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5697,7 +5725,7 @@ CREATE SEQUENCE "public"."InterventiSubVersion_Codice_seq"
 ALTER TABLE "public"."InterventiSubVersion_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 2986 (class 0 OID 0)
+-- TOC entry 2989 (class 0 OID 0)
 -- Dependencies: 194
 -- Name: InterventiSubVersion_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -5721,7 +5749,7 @@ CREATE TABLE "public"."InterventiSubVersion_InfoComboBox" (
 ALTER TABLE "public"."InterventiSubVersion_InfoComboBox" OWNER TO "postgres";
 
 --
--- TOC entry 2987 (class 0 OID 0)
+-- TOC entry 2990 (class 0 OID 0)
 -- Dependencies: 195
 -- Name: TABLE "InterventiSubVersion_InfoComboBox"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5730,7 +5758,7 @@ COMMENT ON TABLE "public"."InterventiSubVersion_InfoComboBox" IS 'Tabella che co
 
 
 --
--- TOC entry 2988 (class 0 OID 0)
+-- TOC entry 2991 (class 0 OID 0)
 -- Dependencies: 195
 -- Name: COLUMN "InterventiSubVersion_InfoComboBox"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5739,7 +5767,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_InfoComboBox"."Codice" IS 'Codi
 
 
 --
--- TOC entry 2989 (class 0 OID 0)
+-- TOC entry 2992 (class 0 OID 0)
 -- Dependencies: 195
 -- Name: COLUMN "InterventiSubVersion_InfoComboBox"."CodiceCampo"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5748,7 +5776,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_InfoComboBox"."CodiceCampo" IS 
 
 
 --
--- TOC entry 2990 (class 0 OID 0)
+-- TOC entry 2993 (class 0 OID 0)
 -- Dependencies: 195
 -- Name: COLUMN "InterventiSubVersion_InfoComboBox"."Value"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5757,7 +5785,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_InfoComboBox"."Value" IS 'Valor
 
 
 --
--- TOC entry 2991 (class 0 OID 0)
+-- TOC entry 2994 (class 0 OID 0)
 -- Dependencies: 195
 -- Name: COLUMN "InterventiSubVersion_InfoComboBox"."Posizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5781,7 +5809,7 @@ CREATE SEQUENCE "public"."InterventiSubVersion_InfoComboBox_Codice_seq"
 ALTER TABLE "public"."InterventiSubVersion_InfoComboBox_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 2992 (class 0 OID 0)
+-- TOC entry 2995 (class 0 OID 0)
 -- Dependencies: 196
 -- Name: InterventiSubVersion_InfoComboBox_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -5816,7 +5844,7 @@ CREATE TABLE "public"."InterventiSubVersion_ListaInformazioni" (
 ALTER TABLE "public"."InterventiSubVersion_ListaInformazioni" OWNER TO "postgres";
 
 --
--- TOC entry 2993 (class 0 OID 0)
+-- TOC entry 2996 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: TABLE "InterventiSubVersion_ListaInformazioni"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5825,7 +5853,7 @@ COMMENT ON TABLE "public"."InterventiSubVersion_ListaInformazioni" IS 'Elenco de
 
 
 --
--- TOC entry 2994 (class 0 OID 0)
+-- TOC entry 2997 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5834,7 +5862,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaInformazioni"."Codice" IS 
 
 
 --
--- TOC entry 2995 (class 0 OID 0)
+-- TOC entry 2998 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."CodiceTitolo"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5843,7 +5871,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaInformazioni"."CodiceTitol
 
 
 --
--- TOC entry 2996 (class 0 OID 0)
+-- TOC entry 2999 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."Campo"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5852,7 +5880,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaInformazioni"."Campo" IS '
 
 
 --
--- TOC entry 2997 (class 0 OID 0)
+-- TOC entry 3000 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."IsTitle"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5861,7 +5889,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaInformazioni"."IsTitle" IS
 
 
 --
--- TOC entry 2998 (class 0 OID 0)
+-- TOC entry 3001 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."IsLink"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5870,7 +5898,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaInformazioni"."IsLink" IS 
 
 
 --
--- TOC entry 2999 (class 0 OID 0)
+-- TOC entry 3002 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."IsBool"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5879,7 +5907,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaInformazioni"."IsBool" IS 
 
 
 --
--- TOC entry 3000 (class 0 OID 0)
+-- TOC entry 3003 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."IsInt"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5888,7 +5916,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaInformazioni"."IsInt" IS '
 
 
 --
--- TOC entry 3001 (class 0 OID 0)
+-- TOC entry 3004 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."IsReal"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5897,7 +5925,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaInformazioni"."IsReal" IS 
 
 
 --
--- TOC entry 3002 (class 0 OID 0)
+-- TOC entry 3005 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."IsText"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5906,7 +5934,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaInformazioni"."IsText" IS 
 
 
 --
--- TOC entry 3003 (class 0 OID 0)
+-- TOC entry 3006 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."IsTimestamp"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5915,7 +5943,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaInformazioni"."IsTimestamp
 
 
 --
--- TOC entry 3004 (class 0 OID 0)
+-- TOC entry 3007 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."IsCombo"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5924,7 +5952,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaInformazioni"."IsCombo" IS
 
 
 --
--- TOC entry 3005 (class 0 OID 0)
+-- TOC entry 3008 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."IsMultiCombo"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5933,7 +5961,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaInformazioni"."IsMultiComb
 
 
 --
--- TOC entry 3006 (class 0 OID 0)
+-- TOC entry 3009 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."IsSeparator"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5942,7 +5970,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaInformazioni"."IsSeparator
 
 
 --
--- TOC entry 3007 (class 0 OID 0)
+-- TOC entry 3010 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."Posizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5951,7 +5979,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaInformazioni"."Posizione" 
 
 
 --
--- TOC entry 3008 (class 0 OID 0)
+-- TOC entry 3011 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: COLUMN "InterventiSubVersion_ListaInformazioni"."Height"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -5975,7 +6003,7 @@ CREATE SEQUENCE "public"."InterventiSubVersion_ListaInformazioni_Codice_seq"
 ALTER TABLE "public"."InterventiSubVersion_ListaInformazioni_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3009 (class 0 OID 0)
+-- TOC entry 3012 (class 0 OID 0)
 -- Dependencies: 198
 -- Name: InterventiSubVersion_ListaInformazioni_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -5998,7 +6026,7 @@ CREATE TABLE "public"."InterventiSubVersion_ListaSchede" (
 ALTER TABLE "public"."InterventiSubVersion_ListaSchede" OWNER TO "postgres";
 
 --
--- TOC entry 3010 (class 0 OID 0)
+-- TOC entry 3013 (class 0 OID 0)
 -- Dependencies: 199
 -- Name: TABLE "InterventiSubVersion_ListaSchede"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6007,7 +6035,7 @@ COMMENT ON TABLE "public"."InterventiSubVersion_ListaSchede" IS 'Lista delle sch
 
 
 --
--- TOC entry 3011 (class 0 OID 0)
+-- TOC entry 3014 (class 0 OID 0)
 -- Dependencies: 199
 -- Name: COLUMN "InterventiSubVersion_ListaSchede"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6016,7 +6044,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaSchede"."Codice" IS 'Codic
 
 
 --
--- TOC entry 3012 (class 0 OID 0)
+-- TOC entry 3015 (class 0 OID 0)
 -- Dependencies: 199
 -- Name: COLUMN "InterventiSubVersion_ListaSchede"."Titolo"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6025,7 +6053,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_ListaSchede"."Titolo" IS 'Titol
 
 
 --
--- TOC entry 3013 (class 0 OID 0)
+-- TOC entry 3016 (class 0 OID 0)
 -- Dependencies: 199
 -- Name: COLUMN "InterventiSubVersion_ListaSchede"."Posizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6049,7 +6077,7 @@ CREATE SEQUENCE "public"."InterventiSubVersion_ListaSchede_Codice_seq"
 ALTER TABLE "public"."InterventiSubVersion_ListaSchede_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3014 (class 0 OID 0)
+-- TOC entry 3017 (class 0 OID 0)
 -- Dependencies: 200
 -- Name: InterventiSubVersion_ListaSchede_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -6072,7 +6100,7 @@ CREATE TABLE "public"."InterventiSubVersion_Relazioni" (
 ALTER TABLE "public"."InterventiSubVersion_Relazioni" OWNER TO "postgres";
 
 --
--- TOC entry 3015 (class 0 OID 0)
+-- TOC entry 3018 (class 0 OID 0)
 -- Dependencies: 201
 -- Name: TABLE "InterventiSubVersion_Relazioni"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6081,7 +6109,7 @@ COMMENT ON TABLE "public"."InterventiSubVersion_Relazioni" IS 'Tabella delle rel
 
 
 --
--- TOC entry 3016 (class 0 OID 0)
+-- TOC entry 3019 (class 0 OID 0)
 -- Dependencies: 201
 -- Name: COLUMN "InterventiSubVersion_Relazioni"."Intervento"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6090,7 +6118,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_Relazioni"."Intervento" IS 'Cod
 
 
 --
--- TOC entry 3017 (class 0 OID 0)
+-- TOC entry 3020 (class 0 OID 0)
 -- Dependencies: 201
 -- Name: COLUMN "InterventiSubVersion_Relazioni"."Padre"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6099,7 +6127,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_Relazioni"."Padre" IS 'Codice d
 
 
 --
--- TOC entry 3018 (class 0 OID 0)
+-- TOC entry 3021 (class 0 OID 0)
 -- Dependencies: 201
 -- Name: COLUMN "InterventiSubVersion_Relazioni"."Figlio"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6122,7 +6150,7 @@ CREATE TABLE "public"."InterventiSubVersion_RelazioniSchede" (
 ALTER TABLE "public"."InterventiSubVersion_RelazioniSchede" OWNER TO "postgres";
 
 --
--- TOC entry 3019 (class 0 OID 0)
+-- TOC entry 3022 (class 0 OID 0)
 -- Dependencies: 202
 -- Name: TABLE "InterventiSubVersion_RelazioniSchede"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6131,7 +6159,7 @@ COMMENT ON TABLE "public"."InterventiSubVersion_RelazioniSchede" IS 'Relazioni t
 
 
 --
--- TOC entry 3020 (class 0 OID 0)
+-- TOC entry 3023 (class 0 OID 0)
 -- Dependencies: 202
 -- Name: COLUMN "InterventiSubVersion_RelazioniSchede"."CodiceIntervento"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6140,7 +6168,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_RelazioniSchede"."CodiceInterve
 
 
 --
--- TOC entry 3021 (class 0 OID 0)
+-- TOC entry 3024 (class 0 OID 0)
 -- Dependencies: 202
 -- Name: COLUMN "InterventiSubVersion_RelazioniSchede"."CodiceTitolo"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6149,7 +6177,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_RelazioniSchede"."CodiceTitolo"
 
 
 --
--- TOC entry 3022 (class 0 OID 0)
+-- TOC entry 3025 (class 0 OID 0)
 -- Dependencies: 202
 -- Name: COLUMN "InterventiSubVersion_RelazioniSchede"."CodiceScheda"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6173,7 +6201,7 @@ CREATE SEQUENCE "public"."InterventiSubVersion_RelazioniSchede_CodiceScheda_seq"
 ALTER TABLE "public"."InterventiSubVersion_RelazioniSchede_CodiceScheda_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3023 (class 0 OID 0)
+-- TOC entry 3026 (class 0 OID 0)
 -- Dependencies: 203
 -- Name: InterventiSubVersion_RelazioniSchede_CodiceScheda_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -6202,7 +6230,7 @@ CREATE TABLE "public"."InterventiSubVersion_Schede" (
 ALTER TABLE "public"."InterventiSubVersion_Schede" OWNER TO "postgres";
 
 --
--- TOC entry 3024 (class 0 OID 0)
+-- TOC entry 3027 (class 0 OID 0)
 -- Dependencies: 204
 -- Name: TABLE "InterventiSubVersion_Schede"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6211,7 +6239,7 @@ COMMENT ON TABLE "public"."InterventiSubVersion_Schede" IS 'Informazioni testual
 
 
 --
--- TOC entry 3025 (class 0 OID 0)
+-- TOC entry 3028 (class 0 OID 0)
 -- Dependencies: 204
 -- Name: COLUMN "InterventiSubVersion_Schede"."CodiceScheda"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6220,7 +6248,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_Schede"."CodiceScheda" IS 'Codi
 
 
 --
--- TOC entry 3026 (class 0 OID 0)
+-- TOC entry 3029 (class 0 OID 0)
 -- Dependencies: 204
 -- Name: COLUMN "InterventiSubVersion_Schede"."CodiceCampo"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6229,7 +6257,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_Schede"."CodiceCampo" IS 'Codic
 
 
 --
--- TOC entry 3027 (class 0 OID 0)
+-- TOC entry 3030 (class 0 OID 0)
 -- Dependencies: 204
 -- Name: COLUMN "InterventiSubVersion_Schede"."BoolValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6238,7 +6266,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_Schede"."BoolValue" IS 'Valore 
 
 
 --
--- TOC entry 3028 (class 0 OID 0)
+-- TOC entry 3031 (class 0 OID 0)
 -- Dependencies: 204
 -- Name: COLUMN "InterventiSubVersion_Schede"."IntValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6247,7 +6275,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_Schede"."IntValue" IS 'Valore i
 
 
 --
--- TOC entry 3029 (class 0 OID 0)
+-- TOC entry 3032 (class 0 OID 0)
 -- Dependencies: 204
 -- Name: COLUMN "InterventiSubVersion_Schede"."RealValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6256,7 +6284,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_Schede"."RealValue" IS 'Valore 
 
 
 --
--- TOC entry 3030 (class 0 OID 0)
+-- TOC entry 3033 (class 0 OID 0)
 -- Dependencies: 204
 -- Name: COLUMN "InterventiSubVersion_Schede"."TextValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6265,7 +6293,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_Schede"."TextValue" IS 'Valore 
 
 
 --
--- TOC entry 3031 (class 0 OID 0)
+-- TOC entry 3034 (class 0 OID 0)
 -- Dependencies: 204
 -- Name: COLUMN "InterventiSubVersion_Schede"."TimestampValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6274,7 +6302,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_Schede"."TimestampValue" IS 'Va
 
 
 --
--- TOC entry 3032 (class 0 OID 0)
+-- TOC entry 3035 (class 0 OID 0)
 -- Dependencies: 204
 -- Name: COLUMN "InterventiSubVersion_Schede"."ComboValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6283,7 +6311,7 @@ COMMENT ON COLUMN "public"."InterventiSubVersion_Schede"."ComboValue" IS 'Indice
 
 
 --
--- TOC entry 3033 (class 0 OID 0)
+-- TOC entry 3036 (class 0 OID 0)
 -- Dependencies: 204
 -- Name: COLUMN "InterventiSubVersion_Schede"."MultiComboValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6313,7 +6341,7 @@ CREATE TABLE "public"."Modelli3D" (
 ALTER TABLE "public"."Modelli3D" OWNER TO "postgres";
 
 --
--- TOC entry 3034 (class 0 OID 0)
+-- TOC entry 3037 (class 0 OID 0)
 -- Dependencies: 205
 -- Name: TABLE "Modelli3D"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6322,7 +6350,7 @@ COMMENT ON TABLE "public"."Modelli3D" IS 'Tabella di riferimento per i Modelli 3
 
 
 --
--- TOC entry 3035 (class 0 OID 0)
+-- TOC entry 3038 (class 0 OID 0)
 -- Dependencies: 205
 -- Name: COLUMN "Modelli3D"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6331,7 +6359,7 @@ COMMENT ON COLUMN "public"."Modelli3D"."Codice" IS 'Codice del Modello 3D (diver
 
 
 --
--- TOC entry 3036 (class 0 OID 0)
+-- TOC entry 3039 (class 0 OID 0)
 -- Dependencies: 205
 -- Name: COLUMN "Modelli3D"."Type"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6342,7 +6370,7 @@ COMMENT ON COLUMN "public"."Modelli3D"."Type" IS '0 -> Mesh
 
 
 --
--- TOC entry 3037 (class 0 OID 0)
+-- TOC entry 3040 (class 0 OID 0)
 -- Dependencies: 205
 -- Name: COLUMN "Modelli3D"."Superficie"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6351,7 +6379,7 @@ COMMENT ON COLUMN "public"."Modelli3D"."Superficie" IS 'Superficie dell''oggetto
 
 
 --
--- TOC entry 3038 (class 0 OID 0)
+-- TOC entry 3041 (class 0 OID 0)
 -- Dependencies: 205
 -- Name: COLUMN "Modelli3D"."Volume"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6360,7 +6388,7 @@ COMMENT ON COLUMN "public"."Modelli3D"."Volume" IS 'Volume dell''oggetto (calcol
 
 
 --
--- TOC entry 3039 (class 0 OID 0)
+-- TOC entry 3042 (class 0 OID 0)
 -- Dependencies: 205
 -- Name: COLUMN "Modelli3D"."LastUpdate"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6369,7 +6397,7 @@ COMMENT ON COLUMN "public"."Modelli3D"."LastUpdate" IS 'Data e ora dell''ultimo 
 
 
 --
--- TOC entry 3040 (class 0 OID 0)
+-- TOC entry 3043 (class 0 OID 0)
 -- Dependencies: 205
 -- Name: COLUMN "Modelli3D"."LastUpdateBy"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6378,7 +6406,7 @@ COMMENT ON COLUMN "public"."Modelli3D"."LastUpdateBy" IS 'Utente che ha effettua
 
 
 --
--- TOC entry 3041 (class 0 OID 0)
+-- TOC entry 3044 (class 0 OID 0)
 -- Dependencies: 205
 -- Name: COLUMN "Modelli3D"."SRS"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6387,7 +6415,7 @@ COMMENT ON COLUMN "public"."Modelli3D"."SRS" IS 'Spatial Reference Systems of th
 
 
 --
--- TOC entry 3042 (class 0 OID 0)
+-- TOC entry 3045 (class 0 OID 0)
 -- Dependencies: 205
 -- Name: COLUMN "Modelli3D"."TranslationX"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6396,7 +6424,7 @@ COMMENT ON COLUMN "public"."Modelli3D"."TranslationX" IS 'Translazione X tra l''
 
 
 --
--- TOC entry 3043 (class 0 OID 0)
+-- TOC entry 3046 (class 0 OID 0)
 -- Dependencies: 205
 -- Name: COLUMN "Modelli3D"."TranslationY"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6405,7 +6433,7 @@ COMMENT ON COLUMN "public"."Modelli3D"."TranslationY" IS 'Translazione Y tra l''
 
 
 --
--- TOC entry 3044 (class 0 OID 0)
+-- TOC entry 3047 (class 0 OID 0)
 -- Dependencies: 205
 -- Name: COLUMN "Modelli3D"."TranslationZ"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6440,7 +6468,7 @@ CREATE TABLE "public"."Modelli3D_LoD" (
 ALTER TABLE "public"."Modelli3D_LoD" OWNER TO "postgres";
 
 --
--- TOC entry 3045 (class 0 OID 0)
+-- TOC entry 3048 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: TABLE "Modelli3D_LoD"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6449,7 +6477,7 @@ COMMENT ON TABLE "public"."Modelli3D_LoD" IS 'Tabella di riferimento per i livel
 
 
 --
--- TOC entry 3046 (class 0 OID 0)
+-- TOC entry 3049 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."CodiceModello"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6458,7 +6486,7 @@ COMMENT ON COLUMN "public"."Modelli3D_LoD"."CodiceModello" IS 'Riferimento al co
 
 
 --
--- TOC entry 3047 (class 0 OID 0)
+-- TOC entry 3050 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."LoD"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6467,7 +6495,7 @@ COMMENT ON COLUMN "public"."Modelli3D_LoD"."LoD" IS 'Level of Detail del modello
 
 
 --
--- TOC entry 3048 (class 0 OID 0)
+-- TOC entry 3051 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."xc"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6476,7 +6504,7 @@ COMMENT ON COLUMN "public"."Modelli3D_LoD"."xc" IS 'Coordinata x del centro';
 
 
 --
--- TOC entry 3049 (class 0 OID 0)
+-- TOC entry 3052 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."yc"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6485,7 +6513,7 @@ COMMENT ON COLUMN "public"."Modelli3D_LoD"."yc" IS 'Coordinata y del centro';
 
 
 --
--- TOC entry 3050 (class 0 OID 0)
+-- TOC entry 3053 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."zc"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6494,7 +6522,7 @@ COMMENT ON COLUMN "public"."Modelli3D_LoD"."zc" IS 'Coordinata z del centro';
 
 
 --
--- TOC entry 3051 (class 0 OID 0)
+-- TOC entry 3054 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."Radius"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6503,7 +6531,7 @@ COMMENT ON COLUMN "public"."Modelli3D_LoD"."Radius" IS 'Raggio del bounding box 
 
 
 --
--- TOC entry 3052 (class 0 OID 0)
+-- TOC entry 3055 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."Texture"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6512,7 +6540,7 @@ COMMENT ON COLUMN "public"."Modelli3D_LoD"."Texture" IS 'Specifica se è stata i
 
 
 --
--- TOC entry 3053 (class 0 OID 0)
+-- TOC entry 3056 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."3dm"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6521,7 +6549,7 @@ COMMENT ON COLUMN "public"."Modelli3D_LoD"."3dm" IS 'Indica se è stato inserito
 
 
 --
--- TOC entry 3054 (class 0 OID 0)
+-- TOC entry 3057 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."3dm_Texture"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6530,7 +6558,7 @@ COMMENT ON COLUMN "public"."Modelli3D_LoD"."3dm_Texture" IS 'Specifica se il mod
 
 
 --
--- TOC entry 3055 (class 0 OID 0)
+-- TOC entry 3058 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."3dm_Backup"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6539,7 +6567,7 @@ COMMENT ON COLUMN "public"."Modelli3D_LoD"."3dm_Backup" IS 'Indica se è present
 
 
 --
--- TOC entry 3056 (class 0 OID 0)
+-- TOC entry 3059 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."JSON"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6548,7 +6576,7 @@ COMMENT ON COLUMN "public"."Modelli3D_LoD"."JSON" IS 'Indica se è stato inserit
 
 
 --
--- TOC entry 3057 (class 0 OID 0)
+-- TOC entry 3060 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."JSON_NumeroParti"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6557,7 +6585,7 @@ COMMENT ON COLUMN "public"."Modelli3D_LoD"."JSON_NumeroParti" IS 'Qualora sia pr
 
 
 --
--- TOC entry 3058 (class 0 OID 0)
+-- TOC entry 3061 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."JSON_Texture"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6566,7 +6594,7 @@ COMMENT ON COLUMN "public"."Modelli3D_LoD"."JSON_Texture" IS 'Specifica se il mo
 
 
 --
--- TOC entry 3059 (class 0 OID 0)
+-- TOC entry 3062 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."OBJ"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6575,7 +6603,7 @@ COMMENT ON COLUMN "public"."Modelli3D_LoD"."OBJ" IS 'Indica se è stato inserito
 
 
 --
--- TOC entry 3060 (class 0 OID 0)
+-- TOC entry 3063 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: COLUMN "Modelli3D_LoD"."HotSpot"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6610,7 +6638,7 @@ CREATE TABLE "public"."Oggetti" (
 ALTER TABLE "public"."Oggetti" OWNER TO "postgres";
 
 --
--- TOC entry 3061 (class 0 OID 0)
+-- TOC entry 3064 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: TABLE "Oggetti"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6619,7 +6647,7 @@ COMMENT ON TABLE "public"."Oggetti" IS 'Tabella contenente gli oggetti (gli ogge
 
 
 --
--- TOC entry 3062 (class 0 OID 0)
+-- TOC entry 3065 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6628,7 +6656,7 @@ COMMENT ON COLUMN "public"."Oggetti"."Codice" IS 'Codice identificativo dell''og
 
 
 --
--- TOC entry 3063 (class 0 OID 0)
+-- TOC entry 3066 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."Layer0"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6637,7 +6665,7 @@ COMMENT ON COLUMN "public"."Oggetti"."Layer0" IS 'Layer0 in cui è contenuto l''
 
 
 --
--- TOC entry 3064 (class 0 OID 0)
+-- TOC entry 3067 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."Layer1"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6646,7 +6674,7 @@ COMMENT ON COLUMN "public"."Oggetti"."Layer1" IS 'Layer1 in cui è contenuto l''
 
 
 --
--- TOC entry 3065 (class 0 OID 0)
+-- TOC entry 3068 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."Layer2"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6655,7 +6683,7 @@ COMMENT ON COLUMN "public"."Oggetti"."Layer2" IS 'Layer2 in cui è contenuto l''
 
 
 --
--- TOC entry 3066 (class 0 OID 0)
+-- TOC entry 3069 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."Layer3"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6664,7 +6692,7 @@ COMMENT ON COLUMN "public"."Oggetti"."Layer3" IS 'Layer3 in cui è contenuto l''
 
 
 --
--- TOC entry 3067 (class 0 OID 0)
+-- TOC entry 3070 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."Name"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6673,7 +6701,7 @@ COMMENT ON COLUMN "public"."Oggetti"."Name" IS 'Nome utilizzato per disambiguare
 
 
 --
--- TOC entry 3068 (class 0 OID 0)
+-- TOC entry 3071 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."Categoria"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6682,7 +6710,7 @@ COMMENT ON COLUMN "public"."Oggetti"."Categoria" IS 'Codice della categoria dell
 
 
 --
--- TOC entry 3069 (class 0 OID 0)
+-- TOC entry 3072 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."DataCreazione"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6691,7 +6719,7 @@ COMMENT ON COLUMN "public"."Oggetti"."DataCreazione" IS 'Data (e ora) di creazio
 
 
 --
--- TOC entry 3070 (class 0 OID 0)
+-- TOC entry 3073 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."DataEliminazione"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6700,7 +6728,7 @@ COMMENT ON COLUMN "public"."Oggetti"."DataEliminazione" IS 'Data (e ora) di elim
 
 
 --
--- TOC entry 3071 (class 0 OID 0)
+-- TOC entry 3074 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."CantiereCreazione"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6709,7 +6737,7 @@ COMMENT ON COLUMN "public"."Oggetti"."CantiereCreazione" IS 'Cantiere nel quale 
 
 
 --
--- TOC entry 3072 (class 0 OID 0)
+-- TOC entry 3075 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."CantiereEliminazione"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6718,7 +6746,7 @@ COMMENT ON COLUMN "public"."Oggetti"."CantiereEliminazione" IS 'Cantiere nel qua
 
 
 --
--- TOC entry 3073 (class 0 OID 0)
+-- TOC entry 3076 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."Lock"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6727,7 +6755,7 @@ COMMENT ON COLUMN "public"."Oggetti"."Lock" IS 'Lock del file dell''utente speci
 
 
 --
--- TOC entry 3074 (class 0 OID 0)
+-- TOC entry 3077 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."Updating"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6736,7 +6764,7 @@ COMMENT ON COLUMN "public"."Oggetti"."Updating" IS 'Oggetto in fase di aggiornam
 
 
 --
--- TOC entry 3075 (class 0 OID 0)
+-- TOC entry 3078 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."LastUpdate"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6745,7 +6773,7 @@ COMMENT ON COLUMN "public"."Oggetti"."LastUpdate" IS 'Data e ora dell''ultimo ag
 
 
 --
--- TOC entry 3076 (class 0 OID 0)
+-- TOC entry 3079 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: COLUMN "Oggetti"."LastUpdateBy"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6779,7 +6807,7 @@ CREATE TABLE "public"."OggettiVersion" (
 ALTER TABLE "public"."OggettiVersion" OWNER TO "postgres";
 
 --
--- TOC entry 3077 (class 0 OID 0)
+-- TOC entry 3080 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: TABLE "OggettiVersion"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6788,7 +6816,7 @@ COMMENT ON TABLE "public"."OggettiVersion" IS 'Tabella contenente gli oggetti (g
 
 
 --
--- TOC entry 3078 (class 0 OID 0)
+-- TOC entry 3081 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: COLUMN "OggettiVersion"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6797,7 +6825,7 @@ COMMENT ON COLUMN "public"."OggettiVersion"."Codice" IS 'Codice identificativo d
 
 
 --
--- TOC entry 3079 (class 0 OID 0)
+-- TOC entry 3082 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: COLUMN "OggettiVersion"."CodiceOggetto"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6806,7 +6834,7 @@ COMMENT ON COLUMN "public"."OggettiVersion"."CodiceOggetto" IS 'Codice identific
 
 
 --
--- TOC entry 3080 (class 0 OID 0)
+-- TOC entry 3083 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: COLUMN "OggettiVersion"."Versione"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6815,7 +6843,7 @@ COMMENT ON COLUMN "public"."OggettiVersion"."Versione" IS 'Versione dell''oggett
 
 
 --
--- TOC entry 3081 (class 0 OID 0)
+-- TOC entry 3084 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: COLUMN "OggettiVersion"."CodiceModello"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6824,7 +6852,7 @@ COMMENT ON COLUMN "public"."OggettiVersion"."CodiceModello" IS 'Codice del model
 
 
 --
--- TOC entry 3082 (class 0 OID 0)
+-- TOC entry 3085 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: COLUMN "OggettiVersion"."Originale"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6833,7 +6861,7 @@ COMMENT ON COLUMN "public"."OggettiVersion"."Originale" IS 'Se 0 è l''oggetto+v
 
 
 --
--- TOC entry 3083 (class 0 OID 0)
+-- TOC entry 3086 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: COLUMN "OggettiVersion"."Live"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6849,7 +6877,7 @@ COMMENT ON COLUMN "public"."OggettiVersion"."Live" IS 'L''oggetto è attivo nel 
 
 
 --
--- TOC entry 3084 (class 0 OID 0)
+-- TOC entry 3087 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: COLUMN "OggettiVersion"."DataCreazione"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6858,7 +6886,7 @@ COMMENT ON COLUMN "public"."OggettiVersion"."DataCreazione" IS 'Data (e ora) di 
 
 
 --
--- TOC entry 3085 (class 0 OID 0)
+-- TOC entry 3088 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: COLUMN "OggettiVersion"."DataEliminazione"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6867,7 +6895,7 @@ COMMENT ON COLUMN "public"."OggettiVersion"."DataEliminazione" IS 'Data (e ora) 
 
 
 --
--- TOC entry 3086 (class 0 OID 0)
+-- TOC entry 3089 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: COLUMN "OggettiVersion"."CantiereCreazione"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6876,7 +6904,7 @@ COMMENT ON COLUMN "public"."OggettiVersion"."CantiereCreazione" IS 'Cantiere nel
 
 
 --
--- TOC entry 3087 (class 0 OID 0)
+-- TOC entry 3090 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: COLUMN "OggettiVersion"."CantiereEliminazione"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6885,7 +6913,7 @@ COMMENT ON COLUMN "public"."OggettiVersion"."CantiereEliminazione" IS 'Cantiere 
 
 
 --
--- TOC entry 3088 (class 0 OID 0)
+-- TOC entry 3091 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: COLUMN "OggettiVersion"."Lock"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6894,7 +6922,7 @@ COMMENT ON COLUMN "public"."OggettiVersion"."Lock" IS 'Lock del file dell''utent
 
 
 --
--- TOC entry 3089 (class 0 OID 0)
+-- TOC entry 3092 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: COLUMN "OggettiVersion"."Updating"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6903,7 +6931,7 @@ COMMENT ON COLUMN "public"."OggettiVersion"."Updating" IS 'Oggetto in fase di ag
 
 
 --
--- TOC entry 3090 (class 0 OID 0)
+-- TOC entry 3093 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: COLUMN "OggettiVersion"."LastUpdate"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6912,7 +6940,7 @@ COMMENT ON COLUMN "public"."OggettiVersion"."LastUpdate" IS 'Data e ora dell''ul
 
 
 --
--- TOC entry 3091 (class 0 OID 0)
+-- TOC entry 3094 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: COLUMN "OggettiVersion"."LastUpdateBy"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6974,7 +7002,7 @@ CREATE TABLE "public"."Log" (
 ALTER TABLE "public"."Log" OWNER TO "postgres";
 
 --
--- TOC entry 3092 (class 0 OID 0)
+-- TOC entry 3095 (class 0 OID 0)
 -- Dependencies: 210
 -- Name: TABLE "Log"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6983,7 +7011,7 @@ COMMENT ON TABLE "public"."Log" IS 'Log degli errori';
 
 
 --
--- TOC entry 3093 (class 0 OID 0)
+-- TOC entry 3096 (class 0 OID 0)
 -- Dependencies: 210
 -- Name: COLUMN "Log"."DateTime"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -6992,7 +7020,7 @@ COMMENT ON COLUMN "public"."Log"."DateTime" IS 'Data e ora dell''evento';
 
 
 --
--- TOC entry 3094 (class 0 OID 0)
+-- TOC entry 3097 (class 0 OID 0)
 -- Dependencies: 210
 -- Name: COLUMN "Log"."Messaggio"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -7001,7 +7029,7 @@ COMMENT ON COLUMN "public"."Log"."Messaggio" IS 'Messaggio di log';
 
 
 --
--- TOC entry 3095 (class 0 OID 0)
+-- TOC entry 3098 (class 0 OID 0)
 -- Dependencies: 210
 -- Name: COLUMN "Log"."User"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -7025,7 +7053,7 @@ CREATE SEQUENCE "public"."Log_NumeroLog_seq"
 ALTER TABLE "public"."Log_NumeroLog_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3096 (class 0 OID 0)
+-- TOC entry 3099 (class 0 OID 0)
 -- Dependencies: 211
 -- Name: Log_NumeroLog_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -7034,12 +7062,12 @@ ALTER SEQUENCE "public"."Log_NumeroLog_seq" OWNED BY "public"."Log"."NumeroLog";
 
 
 --
--- TOC entry 212 (class 1259 OID 317016)
+-- TOC entry 266 (class 1259 OID 419054)
 -- Name: MaterialeInterventiSubVersion; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE "public"."MaterialeInterventiSubVersion" (
-    "CodiceSubVersion" bigint NOT NULL,
+    "CodiceInterventiSubVersion" bigint NOT NULL,
     "URL" character varying(255) NOT NULL,
     "Tipo" character varying(255) NOT NULL,
     "Qualità" integer DEFAULT 0 NOT NULL,
@@ -7052,33 +7080,34 @@ CREATE TABLE "public"."MaterialeInterventiSubVersion" (
     "Proprietario" character varying(255) NOT NULL,
     "Gruppo" character varying(255) NOT NULL,
     "LastModified" timestamp without time zone DEFAULT "now"() NOT NULL,
-    "LastUpdateBy" character varying(255)
+    "LastUpdateBy" character varying(255),
+    "MimeType" character varying(50)
 );
 
 
 ALTER TABLE "public"."MaterialeInterventiSubVersion" OWNER TO "postgres";
 
 --
--- TOC entry 3097 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3100 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: TABLE "MaterialeInterventiSubVersion"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
-COMMENT ON TABLE "public"."MaterialeInterventiSubVersion" IS 'Tabella contenente tutto il materiale (file) associato alle SubVersion';
+COMMENT ON TABLE "public"."MaterialeInterventiSubVersion" IS 'Tabella contenente tutto il materiale (file) associato agli interventi SubVersion';
 
 
 --
--- TOC entry 3098 (class 0 OID 0)
--- Dependencies: 212
--- Name: COLUMN "MaterialeInterventiSubVersion"."CodiceSubVersion"; Type: COMMENT; Schema: public; Owner: postgres
+-- TOC entry 3101 (class 0 OID 0)
+-- Dependencies: 266
+-- Name: COLUMN "MaterialeInterventiSubVersion"."CodiceInterventiSubVersion"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
-COMMENT ON COLUMN "public"."MaterialeInterventiSubVersion"."CodiceSubVersion" IS 'Codice dell''oggetto a cui il materiale è associato';
+COMMENT ON COLUMN "public"."MaterialeInterventiSubVersion"."CodiceInterventiSubVersion" IS 'Codice dell''oggetto a cui il materiale è associato';
 
 
 --
--- TOC entry 3099 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3102 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: COLUMN "MaterialeInterventiSubVersion"."URL"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7086,8 +7115,8 @@ COMMENT ON COLUMN "public"."MaterialeInterventiSubVersion"."URL" IS 'URL del mat
 
 
 --
--- TOC entry 3100 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3103 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: COLUMN "MaterialeInterventiSubVersion"."Tipo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7095,8 +7124,8 @@ COMMENT ON COLUMN "public"."MaterialeInterventiSubVersion"."Tipo" IS 'Tipo del f
 
 
 --
--- TOC entry 3101 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3104 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: COLUMN "MaterialeInterventiSubVersion"."Qualità"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7106,8 +7135,8 @@ COMMENT ON COLUMN "public"."MaterialeInterventiSubVersion"."Qualità" IS '0 -> o
 
 
 --
--- TOC entry 3102 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3105 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: COLUMN "MaterialeInterventiSubVersion"."file"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7115,8 +7144,8 @@ COMMENT ON COLUMN "public"."MaterialeInterventiSubVersion"."file" IS 'File (i fi
 
 
 --
--- TOC entry 3103 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3106 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: COLUMN "MaterialeInterventiSubVersion"."Descrizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7124,8 +7153,8 @@ COMMENT ON COLUMN "public"."MaterialeInterventiSubVersion"."Descrizione" IS 'Des
 
 
 --
--- TOC entry 3104 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3107 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: COLUMN "MaterialeInterventiSubVersion"."DataScatto"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7133,8 +7162,8 @@ COMMENT ON COLUMN "public"."MaterialeInterventiSubVersion"."DataScatto" IS 'Data
 
 
 --
--- TOC entry 3105 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3108 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: COLUMN "MaterialeInterventiSubVersion"."Permessi_lvl1"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7144,8 +7173,8 @@ Default: lettura&scrittura';
 
 
 --
--- TOC entry 3106 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3109 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: COLUMN "MaterialeInterventiSubVersion"."Permessi_lvl2"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7155,8 +7184,8 @@ Default: lettura';
 
 
 --
--- TOC entry 3107 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3110 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: COLUMN "MaterialeInterventiSubVersion"."Permessi_lvl3"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7166,8 +7195,8 @@ Default: nessuno';
 
 
 --
--- TOC entry 3108 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3111 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: COLUMN "MaterialeInterventiSubVersion"."Proprietario"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7175,8 +7204,8 @@ COMMENT ON COLUMN "public"."MaterialeInterventiSubVersion"."Proprietario" IS 'In
 
 
 --
--- TOC entry 3109 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3112 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: COLUMN "MaterialeInterventiSubVersion"."Gruppo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7184,8 +7213,8 @@ COMMENT ON COLUMN "public"."MaterialeInterventiSubVersion"."Gruppo" IS 'gruppo d
 
 
 --
--- TOC entry 3110 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3113 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: COLUMN "MaterialeInterventiSubVersion"."LastUpdateBy"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7193,7 +7222,7 @@ COMMENT ON COLUMN "public"."MaterialeInterventiSubVersion"."LastUpdateBy" IS 'Ut
 
 
 --
--- TOC entry 213 (class 1259 OID 317027)
+-- TOC entry 212 (class 1259 OID 317027)
 -- Name: MaterialeOggetti; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -7211,15 +7240,16 @@ CREATE TABLE "public"."MaterialeOggetti" (
     "Proprietario" character varying(255) NOT NULL,
     "Gruppo" character varying(255) NOT NULL,
     "LastModified" timestamp without time zone DEFAULT "now"() NOT NULL,
-    "LastUpdateBy" character varying(255)
+    "LastUpdateBy" character varying(255),
+    "MimeType" character varying(50)
 );
 
 
 ALTER TABLE "public"."MaterialeOggetti" OWNER TO "postgres";
 
 --
--- TOC entry 3111 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 3114 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: TABLE "MaterialeOggetti"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7227,8 +7257,8 @@ COMMENT ON TABLE "public"."MaterialeOggetti" IS 'Tabella contenente tutto il mat
 
 
 --
--- TOC entry 3112 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 3115 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: COLUMN "MaterialeOggetti"."CodiceOggetto"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7236,8 +7266,8 @@ COMMENT ON COLUMN "public"."MaterialeOggetti"."CodiceOggetto" IS 'Codice dell''o
 
 
 --
--- TOC entry 3113 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 3116 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: COLUMN "MaterialeOggetti"."URL"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7245,8 +7275,8 @@ COMMENT ON COLUMN "public"."MaterialeOggetti"."URL" IS 'URL del materiale';
 
 
 --
--- TOC entry 3114 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 3117 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: COLUMN "MaterialeOggetti"."Tipo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7254,8 +7284,8 @@ COMMENT ON COLUMN "public"."MaterialeOggetti"."Tipo" IS 'Tipo del file (es: imma
 
 
 --
--- TOC entry 3115 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 3118 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: COLUMN "MaterialeOggetti"."Qualità"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7265,8 +7295,8 @@ COMMENT ON COLUMN "public"."MaterialeOggetti"."Qualità" IS '0 -> originale
 
 
 --
--- TOC entry 3116 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 3119 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: COLUMN "MaterialeOggetti"."file"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7274,8 +7304,8 @@ COMMENT ON COLUMN "public"."MaterialeOggetti"."file" IS 'File (i file materiali 
 
 
 --
--- TOC entry 3117 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 3120 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: COLUMN "MaterialeOggetti"."Descrizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7283,8 +7313,8 @@ COMMENT ON COLUMN "public"."MaterialeOggetti"."Descrizione" IS 'Descrizione';
 
 
 --
--- TOC entry 3118 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 3121 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: COLUMN "MaterialeOggetti"."DataScatto"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7292,8 +7322,8 @@ COMMENT ON COLUMN "public"."MaterialeOggetti"."DataScatto" IS 'Data dello scatto
 
 
 --
--- TOC entry 3119 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 3122 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: COLUMN "MaterialeOggetti"."Permessi_lvl1"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7303,8 +7333,8 @@ Default: lettura&scrittura';
 
 
 --
--- TOC entry 3120 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 3123 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: COLUMN "MaterialeOggetti"."Permessi_lvl2"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7314,8 +7344,8 @@ Default: lettura';
 
 
 --
--- TOC entry 3121 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 3124 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: COLUMN "MaterialeOggetti"."Permessi_lvl3"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7325,8 +7355,8 @@ Default: nessuno';
 
 
 --
--- TOC entry 3122 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 3125 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: COLUMN "MaterialeOggetti"."Proprietario"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7334,8 +7364,8 @@ COMMENT ON COLUMN "public"."MaterialeOggetti"."Proprietario" IS 'Informazioni pr
 
 
 --
--- TOC entry 3123 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 3126 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: COLUMN "MaterialeOggetti"."Gruppo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7343,8 +7373,8 @@ COMMENT ON COLUMN "public"."MaterialeOggetti"."Gruppo" IS 'gruppo di proprietà 
 
 
 --
--- TOC entry 3124 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 3127 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: COLUMN "MaterialeOggetti"."LastUpdateBy"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7352,7 +7382,7 @@ COMMENT ON COLUMN "public"."MaterialeOggetti"."LastUpdateBy" IS 'Utente che ha e
 
 
 --
--- TOC entry 214 (class 1259 OID 317038)
+-- TOC entry 213 (class 1259 OID 317038)
 -- Name: MaterialeSubVersion; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -7370,15 +7400,16 @@ CREATE TABLE "public"."MaterialeSubVersion" (
     "Proprietario" character varying(255) NOT NULL,
     "Gruppo" character varying(255) NOT NULL,
     "LastModified" timestamp without time zone DEFAULT "now"() NOT NULL,
-    "LastUpdateBy" character varying(255)
+    "LastUpdateBy" character varying(255),
+    "MimeType" character varying(50)
 );
 
 
 ALTER TABLE "public"."MaterialeSubVersion" OWNER TO "postgres";
 
 --
--- TOC entry 3125 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3128 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: TABLE "MaterialeSubVersion"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7386,8 +7417,8 @@ COMMENT ON TABLE "public"."MaterialeSubVersion" IS 'Tabella contenente tutto il 
 
 
 --
--- TOC entry 3126 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3129 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: COLUMN "MaterialeSubVersion"."CodiceSubVersion"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7395,8 +7426,8 @@ COMMENT ON COLUMN "public"."MaterialeSubVersion"."CodiceSubVersion" IS 'Codice d
 
 
 --
--- TOC entry 3127 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3130 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: COLUMN "MaterialeSubVersion"."URL"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7404,8 +7435,8 @@ COMMENT ON COLUMN "public"."MaterialeSubVersion"."URL" IS 'URL del materiale';
 
 
 --
--- TOC entry 3128 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3131 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: COLUMN "MaterialeSubVersion"."Tipo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7413,8 +7444,8 @@ COMMENT ON COLUMN "public"."MaterialeSubVersion"."Tipo" IS 'Tipo del file (es: i
 
 
 --
--- TOC entry 3129 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3132 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: COLUMN "MaterialeSubVersion"."Qualità"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7424,8 +7455,8 @@ COMMENT ON COLUMN "public"."MaterialeSubVersion"."Qualità" IS '0 -> originale
 
 
 --
--- TOC entry 3130 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3133 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: COLUMN "MaterialeSubVersion"."file"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7433,8 +7464,8 @@ COMMENT ON COLUMN "public"."MaterialeSubVersion"."file" IS 'File (i file materia
 
 
 --
--- TOC entry 3131 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3134 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: COLUMN "MaterialeSubVersion"."Descrizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7442,8 +7473,8 @@ COMMENT ON COLUMN "public"."MaterialeSubVersion"."Descrizione" IS 'Descrizione';
 
 
 --
--- TOC entry 3132 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3135 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: COLUMN "MaterialeSubVersion"."DataScatto"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7451,8 +7482,8 @@ COMMENT ON COLUMN "public"."MaterialeSubVersion"."DataScatto" IS 'Data dello sca
 
 
 --
--- TOC entry 3133 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3136 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: COLUMN "MaterialeSubVersion"."Permessi_lvl1"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7462,8 +7493,8 @@ Default: lettura&scrittura';
 
 
 --
--- TOC entry 3134 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3137 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: COLUMN "MaterialeSubVersion"."Permessi_lvl2"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7473,8 +7504,8 @@ Default: lettura';
 
 
 --
--- TOC entry 3135 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3138 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: COLUMN "MaterialeSubVersion"."Permessi_lvl3"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7484,8 +7515,8 @@ Default: nessuno';
 
 
 --
--- TOC entry 3136 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3139 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: COLUMN "MaterialeSubVersion"."Proprietario"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7493,8 +7524,8 @@ COMMENT ON COLUMN "public"."MaterialeSubVersion"."Proprietario" IS 'Informazioni
 
 
 --
--- TOC entry 3137 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3140 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: COLUMN "MaterialeSubVersion"."Gruppo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7502,8 +7533,8 @@ COMMENT ON COLUMN "public"."MaterialeSubVersion"."Gruppo" IS 'gruppo di propriet
 
 
 --
--- TOC entry 3138 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3141 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: COLUMN "MaterialeSubVersion"."LastUpdateBy"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7511,7 +7542,7 @@ COMMENT ON COLUMN "public"."MaterialeSubVersion"."LastUpdateBy" IS 'Utente che h
 
 
 --
--- TOC entry 215 (class 1259 OID 317049)
+-- TOC entry 214 (class 1259 OID 317049)
 -- Name: MaterialeVersioni; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -7529,15 +7560,16 @@ CREATE TABLE "public"."MaterialeVersioni" (
     "Proprietario" character varying(255) NOT NULL,
     "Gruppo" character varying(255) NOT NULL,
     "LastModified" timestamp without time zone DEFAULT "now"() NOT NULL,
-    "LastUpdateBy" character varying(255)
+    "LastUpdateBy" character varying(255),
+    "MimeType" character varying(50)
 );
 
 
 ALTER TABLE "public"."MaterialeVersioni" OWNER TO "postgres";
 
 --
--- TOC entry 3139 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3142 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: TABLE "MaterialeVersioni"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7545,8 +7577,8 @@ COMMENT ON TABLE "public"."MaterialeVersioni" IS 'Tabella contenente tutto il ma
 
 
 --
--- TOC entry 3140 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3143 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: COLUMN "MaterialeVersioni"."CodiceVersione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7554,8 +7586,8 @@ COMMENT ON COLUMN "public"."MaterialeVersioni"."CodiceVersione" IS 'Codice dell'
 
 
 --
--- TOC entry 3141 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3144 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: COLUMN "MaterialeVersioni"."URL"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7563,8 +7595,8 @@ COMMENT ON COLUMN "public"."MaterialeVersioni"."URL" IS 'URL del materiale';
 
 
 --
--- TOC entry 3142 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3145 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: COLUMN "MaterialeVersioni"."Tipo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7572,8 +7604,8 @@ COMMENT ON COLUMN "public"."MaterialeVersioni"."Tipo" IS 'Tipo del file (es: imm
 
 
 --
--- TOC entry 3143 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3146 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: COLUMN "MaterialeVersioni"."Qualità"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7583,8 +7615,8 @@ COMMENT ON COLUMN "public"."MaterialeVersioni"."Qualità" IS '0 -> originale
 
 
 --
--- TOC entry 3144 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3147 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: COLUMN "MaterialeVersioni"."file"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7592,8 +7624,8 @@ COMMENT ON COLUMN "public"."MaterialeVersioni"."file" IS 'File (i file materiali
 
 
 --
--- TOC entry 3145 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3148 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: COLUMN "MaterialeVersioni"."Descrizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7601,8 +7633,8 @@ COMMENT ON COLUMN "public"."MaterialeVersioni"."Descrizione" IS 'Descrizione';
 
 
 --
--- TOC entry 3146 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3149 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: COLUMN "MaterialeVersioni"."DataScatto"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7610,8 +7642,8 @@ COMMENT ON COLUMN "public"."MaterialeVersioni"."DataScatto" IS 'Data dello scatt
 
 
 --
--- TOC entry 3147 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3150 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: COLUMN "MaterialeVersioni"."Permessi_lvl1"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7621,8 +7653,8 @@ Default: lettura&scrittura';
 
 
 --
--- TOC entry 3148 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3151 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: COLUMN "MaterialeVersioni"."Permessi_lvl2"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7632,8 +7664,8 @@ Default: lettura';
 
 
 --
--- TOC entry 3149 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3152 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: COLUMN "MaterialeVersioni"."Permessi_lvl3"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7643,8 +7675,8 @@ Default: nessuno';
 
 
 --
--- TOC entry 3150 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3153 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: COLUMN "MaterialeVersioni"."Proprietario"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7652,8 +7684,8 @@ COMMENT ON COLUMN "public"."MaterialeVersioni"."Proprietario" IS 'Informazioni p
 
 
 --
--- TOC entry 3151 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3154 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: COLUMN "MaterialeVersioni"."Gruppo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7661,8 +7693,8 @@ COMMENT ON COLUMN "public"."MaterialeVersioni"."Gruppo" IS 'gruppo di proprietà
 
 
 --
--- TOC entry 3152 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3155 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: COLUMN "MaterialeVersioni"."LastUpdateBy"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7670,7 +7702,7 @@ COMMENT ON COLUMN "public"."MaterialeVersioni"."LastUpdateBy" IS 'Utente che ha 
 
 
 --
--- TOC entry 216 (class 1259 OID 317060)
+-- TOC entry 215 (class 1259 OID 317060)
 -- Name: MaxCantieri; Type: VIEW; Schema: public; Owner: postgres
 --
 
@@ -7684,7 +7716,7 @@ CREATE VIEW "public"."MaxCantieri" AS
 ALTER TABLE "public"."MaxCantieri" OWNER TO "postgres";
 
 --
--- TOC entry 217 (class 1259 OID 317064)
+-- TOC entry 216 (class 1259 OID 317064)
 -- Name: Modelli3D_3dm; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -7700,8 +7732,8 @@ CREATE TABLE "public"."Modelli3D_3dm" (
 ALTER TABLE "public"."Modelli3D_3dm" OWNER TO "postgres";
 
 --
--- TOC entry 3153 (class 0 OID 0)
--- Dependencies: 217
+-- TOC entry 3156 (class 0 OID 0)
+-- Dependencies: 216
 -- Name: TABLE "Modelli3D_3dm"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7709,8 +7741,8 @@ COMMENT ON TABLE "public"."Modelli3D_3dm" IS 'Tabella contenente i file 3dm dei 
 
 
 --
--- TOC entry 3154 (class 0 OID 0)
--- Dependencies: 217
+-- TOC entry 3157 (class 0 OID 0)
+-- Dependencies: 216
 -- Name: COLUMN "Modelli3D_3dm"."CodiceModello"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7718,8 +7750,8 @@ COMMENT ON COLUMN "public"."Modelli3D_3dm"."CodiceModello" IS 'Codice del Modell
 
 
 --
--- TOC entry 3155 (class 0 OID 0)
--- Dependencies: 217
+-- TOC entry 3158 (class 0 OID 0)
+-- Dependencies: 216
 -- Name: COLUMN "Modelli3D_3dm"."LoD"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7727,8 +7759,8 @@ COMMENT ON COLUMN "public"."Modelli3D_3dm"."LoD" IS 'Livello di dettaglio';
 
 
 --
--- TOC entry 3156 (class 0 OID 0)
--- Dependencies: 217
+-- TOC entry 3159 (class 0 OID 0)
+-- Dependencies: 216
 -- Name: COLUMN "Modelli3D_3dm"."file"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7736,8 +7768,8 @@ COMMENT ON COLUMN "public"."Modelli3D_3dm"."file" IS 'File 3dm codificato in byt
 
 
 --
--- TOC entry 3157 (class 0 OID 0)
--- Dependencies: 217
+-- TOC entry 3160 (class 0 OID 0)
+-- Dependencies: 216
 -- Name: COLUMN "Modelli3D_3dm"."LastUpdate"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7745,8 +7777,8 @@ COMMENT ON COLUMN "public"."Modelli3D_3dm"."LastUpdate" IS 'Data e ora dell''ult
 
 
 --
--- TOC entry 3158 (class 0 OID 0)
--- Dependencies: 217
+-- TOC entry 3161 (class 0 OID 0)
+-- Dependencies: 216
 -- Name: COLUMN "Modelli3D_3dm"."LastUpdateBy"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7754,7 +7786,7 @@ COMMENT ON COLUMN "public"."Modelli3D_3dm"."LastUpdateBy" IS 'Utente che ha effe
 
 
 --
--- TOC entry 218 (class 1259 OID 317072)
+-- TOC entry 217 (class 1259 OID 317072)
 -- Name: Modelli3D_3dm_Backup; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -7770,8 +7802,8 @@ CREATE TABLE "public"."Modelli3D_3dm_Backup" (
 ALTER TABLE "public"."Modelli3D_3dm_Backup" OWNER TO "postgres";
 
 --
--- TOC entry 3159 (class 0 OID 0)
--- Dependencies: 218
+-- TOC entry 3162 (class 0 OID 0)
+-- Dependencies: 217
 -- Name: TABLE "Modelli3D_3dm_Backup"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7779,7 +7811,7 @@ COMMENT ON TABLE "public"."Modelli3D_3dm_Backup" IS 'Tabella contenente il backu
 
 
 --
--- TOC entry 219 (class 1259 OID 317080)
+-- TOC entry 218 (class 1259 OID 317080)
 -- Name: Modelli3D_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -7794,8 +7826,8 @@ CREATE SEQUENCE "public"."Modelli3D_Codice_seq"
 ALTER TABLE "public"."Modelli3D_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3160 (class 0 OID 0)
--- Dependencies: 219
+-- TOC entry 3163 (class 0 OID 0)
+-- Dependencies: 218
 -- Name: Modelli3D_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -7803,7 +7835,7 @@ ALTER SEQUENCE "public"."Modelli3D_Codice_seq" OWNED BY "public"."Modelli3D"."Co
 
 
 --
--- TOC entry 220 (class 1259 OID 317082)
+-- TOC entry 219 (class 1259 OID 317082)
 -- Name: Modelli3D_HotSpotColor; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -7819,8 +7851,8 @@ CREATE TABLE "public"."Modelli3D_HotSpotColor" (
 ALTER TABLE "public"."Modelli3D_HotSpotColor" OWNER TO "postgres";
 
 --
--- TOC entry 3161 (class 0 OID 0)
--- Dependencies: 220
+-- TOC entry 3164 (class 0 OID 0)
+-- Dependencies: 219
 -- Name: TABLE "Modelli3D_HotSpotColor"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7828,8 +7860,8 @@ COMMENT ON TABLE "public"."Modelli3D_HotSpotColor" IS 'Contiene i dati colore pe
 
 
 --
--- TOC entry 3162 (class 0 OID 0)
--- Dependencies: 220
+-- TOC entry 3165 (class 0 OID 0)
+-- Dependencies: 219
 -- Name: COLUMN "Modelli3D_HotSpotColor"."CodiceModello"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7837,8 +7869,8 @@ COMMENT ON COLUMN "public"."Modelli3D_HotSpotColor"."CodiceModello" IS 'Codice d
 
 
 --
--- TOC entry 3163 (class 0 OID 0)
--- Dependencies: 220
+-- TOC entry 3166 (class 0 OID 0)
+-- Dependencies: 219
 -- Name: COLUMN "Modelli3D_HotSpotColor"."ColorR"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7846,8 +7878,8 @@ COMMENT ON COLUMN "public"."Modelli3D_HotSpotColor"."ColorR" IS 'Colore red';
 
 
 --
--- TOC entry 3164 (class 0 OID 0)
--- Dependencies: 220
+-- TOC entry 3167 (class 0 OID 0)
+-- Dependencies: 219
 -- Name: COLUMN "Modelli3D_HotSpotColor"."ColorG"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7855,8 +7887,8 @@ COMMENT ON COLUMN "public"."Modelli3D_HotSpotColor"."ColorG" IS 'Colore green';
 
 
 --
--- TOC entry 3165 (class 0 OID 0)
--- Dependencies: 220
+-- TOC entry 3168 (class 0 OID 0)
+-- Dependencies: 219
 -- Name: COLUMN "Modelli3D_HotSpotColor"."ColorB"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7864,8 +7896,8 @@ COMMENT ON COLUMN "public"."Modelli3D_HotSpotColor"."ColorB" IS 'Colore blue';
 
 
 --
--- TOC entry 3166 (class 0 OID 0)
--- Dependencies: 220
+-- TOC entry 3169 (class 0 OID 0)
+-- Dependencies: 219
 -- Name: COLUMN "Modelli3D_HotSpotColor"."ColorA"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7873,7 +7905,7 @@ COMMENT ON COLUMN "public"."Modelli3D_HotSpotColor"."ColorA" IS 'Canale Alpha de
 
 
 --
--- TOC entry 221 (class 1259 OID 317089)
+-- TOC entry 220 (class 1259 OID 317089)
 -- Name: Modelli3D_JSON; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -7890,8 +7922,8 @@ CREATE TABLE "public"."Modelli3D_JSON" (
 ALTER TABLE "public"."Modelli3D_JSON" OWNER TO "postgres";
 
 --
--- TOC entry 3167 (class 0 OID 0)
--- Dependencies: 221
+-- TOC entry 3170 (class 0 OID 0)
+-- Dependencies: 220
 -- Name: TABLE "Modelli3D_JSON"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7899,8 +7931,8 @@ COMMENT ON TABLE "public"."Modelli3D_JSON" IS 'Tabella contenente i file JSON de
 
 
 --
--- TOC entry 3168 (class 0 OID 0)
--- Dependencies: 221
+-- TOC entry 3171 (class 0 OID 0)
+-- Dependencies: 220
 -- Name: COLUMN "Modelli3D_JSON"."CodiceModello"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7908,8 +7940,8 @@ COMMENT ON COLUMN "public"."Modelli3D_JSON"."CodiceModello" IS 'Codice del Model
 
 
 --
--- TOC entry 3169 (class 0 OID 0)
--- Dependencies: 221
+-- TOC entry 3172 (class 0 OID 0)
+-- Dependencies: 220
 -- Name: COLUMN "Modelli3D_JSON"."LoD"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7917,8 +7949,8 @@ COMMENT ON COLUMN "public"."Modelli3D_JSON"."LoD" IS 'Livello di dettaglio';
 
 
 --
--- TOC entry 3170 (class 0 OID 0)
--- Dependencies: 221
+-- TOC entry 3173 (class 0 OID 0)
+-- Dependencies: 220
 -- Name: COLUMN "Modelli3D_JSON"."Parte"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7926,8 +7958,8 @@ COMMENT ON COLUMN "public"."Modelli3D_JSON"."Parte" IS 'Parte del file JSON';
 
 
 --
--- TOC entry 3171 (class 0 OID 0)
--- Dependencies: 221
+-- TOC entry 3174 (class 0 OID 0)
+-- Dependencies: 220
 -- Name: COLUMN "Modelli3D_JSON"."file"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7935,8 +7967,8 @@ COMMENT ON COLUMN "public"."Modelli3D_JSON"."file" IS 'File JSON codificato in b
 
 
 --
--- TOC entry 3172 (class 0 OID 0)
--- Dependencies: 221
+-- TOC entry 3175 (class 0 OID 0)
+-- Dependencies: 220
 -- Name: COLUMN "Modelli3D_JSON"."LastUpdate"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7944,8 +7976,8 @@ COMMENT ON COLUMN "public"."Modelli3D_JSON"."LastUpdate" IS 'Data e ora dell''ul
 
 
 --
--- TOC entry 3173 (class 0 OID 0)
--- Dependencies: 221
+-- TOC entry 3176 (class 0 OID 0)
+-- Dependencies: 220
 -- Name: COLUMN "Modelli3D_JSON"."LastUpdateBy"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7953,7 +7985,7 @@ COMMENT ON COLUMN "public"."Modelli3D_JSON"."LastUpdateBy" IS 'Utente che ha eff
 
 
 --
--- TOC entry 222 (class 1259 OID 317096)
+-- TOC entry 221 (class 1259 OID 317096)
 -- Name: Modelli3D_OBJ; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -7970,8 +8002,8 @@ CREATE TABLE "public"."Modelli3D_OBJ" (
 ALTER TABLE "public"."Modelli3D_OBJ" OWNER TO "postgres";
 
 --
--- TOC entry 3174 (class 0 OID 0)
--- Dependencies: 222
+-- TOC entry 3177 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: TABLE "Modelli3D_OBJ"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7979,8 +8011,8 @@ COMMENT ON TABLE "public"."Modelli3D_OBJ" IS 'Tabella contenente i file OBJ dei 
 
 
 --
--- TOC entry 3175 (class 0 OID 0)
--- Dependencies: 222
+-- TOC entry 3178 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: COLUMN "Modelli3D_OBJ"."CodiceModello"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7988,8 +8020,8 @@ COMMENT ON COLUMN "public"."Modelli3D_OBJ"."CodiceModello" IS 'Codice del Modell
 
 
 --
--- TOC entry 3176 (class 0 OID 0)
--- Dependencies: 222
+-- TOC entry 3179 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: COLUMN "Modelli3D_OBJ"."LoD"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -7997,8 +8029,8 @@ COMMENT ON COLUMN "public"."Modelli3D_OBJ"."LoD" IS 'Livello di dettaglio';
 
 
 --
--- TOC entry 3177 (class 0 OID 0)
--- Dependencies: 222
+-- TOC entry 3180 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: COLUMN "Modelli3D_OBJ"."Parte"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8006,8 +8038,8 @@ COMMENT ON COLUMN "public"."Modelli3D_OBJ"."Parte" IS 'Parte del file OBJ';
 
 
 --
--- TOC entry 3178 (class 0 OID 0)
--- Dependencies: 222
+-- TOC entry 3181 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: COLUMN "Modelli3D_OBJ"."file"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8015,8 +8047,8 @@ COMMENT ON COLUMN "public"."Modelli3D_OBJ"."file" IS 'File OBJ codificato in byt
 
 
 --
--- TOC entry 3179 (class 0 OID 0)
--- Dependencies: 222
+-- TOC entry 3182 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: COLUMN "Modelli3D_OBJ"."LastUpdate"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8024,8 +8056,8 @@ COMMENT ON COLUMN "public"."Modelli3D_OBJ"."LastUpdate" IS 'Data e ora dell''ult
 
 
 --
--- TOC entry 3180 (class 0 OID 0)
--- Dependencies: 222
+-- TOC entry 3183 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: COLUMN "Modelli3D_OBJ"."LastUpdateBy"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8033,7 +8065,7 @@ COMMENT ON COLUMN "public"."Modelli3D_OBJ"."LastUpdateBy" IS 'Utente che ha effe
 
 
 --
--- TOC entry 223 (class 1259 OID 317103)
+-- TOC entry 222 (class 1259 OID 317103)
 -- Name: Modelli3D_Texture; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -8052,8 +8084,8 @@ CREATE TABLE "public"."Modelli3D_Texture" (
 ALTER TABLE "public"."Modelli3D_Texture" OWNER TO "postgres";
 
 --
--- TOC entry 3181 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 3184 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: TABLE "Modelli3D_Texture"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8061,8 +8093,8 @@ COMMENT ON TABLE "public"."Modelli3D_Texture" IS 'Tabella contenente le texture 
 
 
 --
--- TOC entry 3182 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 3185 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: COLUMN "Modelli3D_Texture"."CodiceModello"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8070,8 +8102,8 @@ COMMENT ON COLUMN "public"."Modelli3D_Texture"."CodiceModello" IS 'Codice del Mo
 
 
 --
--- TOC entry 3183 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 3186 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: COLUMN "Modelli3D_Texture"."TextureNumber"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8079,8 +8111,8 @@ COMMENT ON COLUMN "public"."Modelli3D_Texture"."TextureNumber" IS 'Numero dell''
 
 
 --
--- TOC entry 3184 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 3187 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: COLUMN "Modelli3D_Texture"."Qualità"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8095,8 +8127,8 @@ COMMENT ON COLUMN "public"."Modelli3D_Texture"."Qualità" IS '0 -> originale
 
 
 --
--- TOC entry 3185 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 3188 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: COLUMN "Modelli3D_Texture"."Filename"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8104,8 +8136,8 @@ COMMENT ON COLUMN "public"."Modelli3D_Texture"."Filename" IS 'Nome del file';
 
 
 --
--- TOC entry 3186 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 3189 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: COLUMN "Modelli3D_Texture"."file"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8113,8 +8145,8 @@ COMMENT ON COLUMN "public"."Modelli3D_Texture"."file" IS 'File salvato il bytea'
 
 
 --
--- TOC entry 3187 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 3190 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: COLUMN "Modelli3D_Texture"."MimeType"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8122,8 +8154,8 @@ COMMENT ON COLUMN "public"."Modelli3D_Texture"."MimeType" IS 'MimeType del file'
 
 
 --
--- TOC entry 3188 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 3191 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: COLUMN "Modelli3D_Texture"."LastUpdate"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8131,8 +8163,8 @@ COMMENT ON COLUMN "public"."Modelli3D_Texture"."LastUpdate" IS 'Data dell''ultim
 
 
 --
--- TOC entry 3189 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 3192 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: COLUMN "Modelli3D_Texture"."LastUpdateBy"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8140,7 +8172,7 @@ COMMENT ON COLUMN "public"."Modelli3D_Texture"."LastUpdateBy" IS 'Utente che ha 
 
 
 --
--- TOC entry 224 (class 1259 OID 317112)
+-- TOC entry 223 (class 1259 OID 317112)
 -- Name: OggettiSubVersion; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -8164,8 +8196,8 @@ CREATE TABLE "public"."OggettiSubVersion" (
 ALTER TABLE "public"."OggettiSubVersion" OWNER TO "postgres";
 
 --
--- TOC entry 3190 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3193 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: TABLE "OggettiSubVersion"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8173,8 +8205,8 @@ COMMENT ON TABLE "public"."OggettiSubVersion" IS 'Tabella contenente gli oggetti
 
 
 --
--- TOC entry 3191 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3194 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN "OggettiSubVersion"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8182,8 +8214,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion"."Codice" IS 'Codice identificativ
 
 
 --
--- TOC entry 3192 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3195 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN "OggettiSubVersion"."CodiceOggetto"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8191,8 +8223,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion"."CodiceOggetto" IS 'Codice identi
 
 
 --
--- TOC entry 3193 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3196 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN "OggettiSubVersion"."CodiceVersione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8200,8 +8232,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion"."CodiceVersione" IS 'Codice ident
 
 
 --
--- TOC entry 3194 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3197 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN "OggettiSubVersion"."SubVersion"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8209,8 +8241,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion"."SubVersion" IS 'SubVersion dell'
 
 
 --
--- TOC entry 3195 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3198 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN "OggettiSubVersion"."Originale"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8218,8 +8250,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion"."Originale" IS 'Se 0 è l''oggett
 
 
 --
--- TOC entry 3196 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3199 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN "OggettiSubVersion"."DataCreazione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8227,8 +8259,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion"."DataCreazione" IS 'Data (e ora) 
 
 
 --
--- TOC entry 3197 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3200 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN "OggettiSubVersion"."DataEliminazione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8236,8 +8268,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion"."DataEliminazione" IS 'Data (e or
 
 
 --
--- TOC entry 3198 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3201 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN "OggettiSubVersion"."CantiereCreazione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8245,8 +8277,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion"."CantiereCreazione" IS 'Cantiere 
 
 
 --
--- TOC entry 3199 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3202 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN "OggettiSubVersion"."CantiereEliminazione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8254,8 +8286,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion"."CantiereEliminazione" IS 'Cantie
 
 
 --
--- TOC entry 3200 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3203 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN "OggettiSubVersion"."Lock"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8263,8 +8295,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion"."Lock" IS 'Lock del file dell''ut
 
 
 --
--- TOC entry 3201 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3204 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN "OggettiSubVersion"."Updating"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8272,8 +8304,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion"."Updating" IS 'Oggetto in fase di
 
 
 --
--- TOC entry 3202 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3205 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN "OggettiSubVersion"."LastUpdate"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8281,8 +8313,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion"."LastUpdate" IS 'Data e ora dell'
 
 
 --
--- TOC entry 3203 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3206 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN "OggettiSubVersion"."LastUpdateBy"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8290,7 +8322,7 @@ COMMENT ON COLUMN "public"."OggettiSubVersion"."LastUpdateBy" IS 'Utente che ha 
 
 
 --
--- TOC entry 225 (class 1259 OID 317125)
+-- TOC entry 224 (class 1259 OID 317125)
 -- Name: OggettiSubVersion_CategorieSchede; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -8303,8 +8335,8 @@ CREATE TABLE "public"."OggettiSubVersion_CategorieSchede" (
 ALTER TABLE "public"."OggettiSubVersion_CategorieSchede" OWNER TO "postgres";
 
 --
--- TOC entry 3204 (class 0 OID 0)
--- Dependencies: 225
+-- TOC entry 3207 (class 0 OID 0)
+-- Dependencies: 224
 -- Name: COLUMN "OggettiSubVersion_CategorieSchede"."CodiceScheda"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8312,7 +8344,7 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_CategorieSchede"."CodiceScheda" IS
 
 
 --
--- TOC entry 226 (class 1259 OID 317128)
+-- TOC entry 225 (class 1259 OID 317128)
 -- Name: OggettiSubVersion_InfoComboBox; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -8327,8 +8359,8 @@ CREATE TABLE "public"."OggettiSubVersion_InfoComboBox" (
 ALTER TABLE "public"."OggettiSubVersion_InfoComboBox" OWNER TO "postgres";
 
 --
--- TOC entry 3205 (class 0 OID 0)
--- Dependencies: 226
+-- TOC entry 3208 (class 0 OID 0)
+-- Dependencies: 225
 -- Name: TABLE "OggettiSubVersion_InfoComboBox"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8336,8 +8368,8 @@ COMMENT ON TABLE "public"."OggettiSubVersion_InfoComboBox" IS 'Tabella che conti
 
 
 --
--- TOC entry 3206 (class 0 OID 0)
--- Dependencies: 226
+-- TOC entry 3209 (class 0 OID 0)
+-- Dependencies: 225
 -- Name: COLUMN "OggettiSubVersion_InfoComboBox"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8345,8 +8377,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_InfoComboBox"."Codice" IS 'Codice 
 
 
 --
--- TOC entry 3207 (class 0 OID 0)
--- Dependencies: 226
+-- TOC entry 3210 (class 0 OID 0)
+-- Dependencies: 225
 -- Name: COLUMN "OggettiSubVersion_InfoComboBox"."CodiceCampo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8354,8 +8386,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_InfoComboBox"."CodiceCampo" IS 'Co
 
 
 --
--- TOC entry 3208 (class 0 OID 0)
--- Dependencies: 226
+-- TOC entry 3211 (class 0 OID 0)
+-- Dependencies: 225
 -- Name: COLUMN "OggettiSubVersion_InfoComboBox"."Value"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8363,8 +8395,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_InfoComboBox"."Value" IS 'Valore d
 
 
 --
--- TOC entry 3209 (class 0 OID 0)
--- Dependencies: 226
+-- TOC entry 3212 (class 0 OID 0)
+-- Dependencies: 225
 -- Name: COLUMN "OggettiSubVersion_InfoComboBox"."Posizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8372,7 +8404,7 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_InfoComboBox"."Posizione" IS 'Posi
 
 
 --
--- TOC entry 227 (class 1259 OID 317131)
+-- TOC entry 226 (class 1259 OID 317131)
 -- Name: OggettiSubVersion_InfoComboBox_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -8387,8 +8419,8 @@ CREATE SEQUENCE "public"."OggettiSubVersion_InfoComboBox_Codice_seq"
 ALTER TABLE "public"."OggettiSubVersion_InfoComboBox_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3210 (class 0 OID 0)
--- Dependencies: 227
+-- TOC entry 3213 (class 0 OID 0)
+-- Dependencies: 226
 -- Name: OggettiSubVersion_InfoComboBox_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -8396,7 +8428,7 @@ ALTER SEQUENCE "public"."OggettiSubVersion_InfoComboBox_Codice_seq" OWNED BY "pu
 
 
 --
--- TOC entry 228 (class 1259 OID 317133)
+-- TOC entry 227 (class 1259 OID 317133)
 -- Name: OggettiSubVersion_ListaInformazioni; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -8422,8 +8454,8 @@ CREATE TABLE "public"."OggettiSubVersion_ListaInformazioni" (
 ALTER TABLE "public"."OggettiSubVersion_ListaInformazioni" OWNER TO "postgres";
 
 --
--- TOC entry 3211 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3214 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: TABLE "OggettiSubVersion_ListaInformazioni"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8431,8 +8463,8 @@ COMMENT ON TABLE "public"."OggettiSubVersion_ListaInformazioni" IS 'Elenco delle
 
 
 --
--- TOC entry 3212 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3215 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8440,8 +8472,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."Codice" IS 'Co
 
 
 --
--- TOC entry 3213 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3216 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."CodiceTitolo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8449,8 +8481,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."CodiceTitolo" 
 
 
 --
--- TOC entry 3214 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3217 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."Campo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8458,8 +8490,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."Campo" IS 'Nom
 
 
 --
--- TOC entry 3215 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3218 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."IsTitle"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8467,8 +8499,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."IsTitle" IS 'S
 
 
 --
--- TOC entry 3216 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3219 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."IsLink"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8476,8 +8508,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."IsLink" IS 'Sp
 
 
 --
--- TOC entry 3217 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3220 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."IsBool"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8485,8 +8517,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."IsBool" IS 'Sp
 
 
 --
--- TOC entry 3218 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3221 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."IsInt"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8494,8 +8526,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."IsInt" IS 'Spe
 
 
 --
--- TOC entry 3219 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3222 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."IsReal"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8503,8 +8535,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."IsReal" IS 'Sp
 
 
 --
--- TOC entry 3220 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3223 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."IsText"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8512,8 +8544,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."IsText" IS 'Sp
 
 
 --
--- TOC entry 3221 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3224 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."IsTimestamp"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8521,8 +8553,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."IsTimestamp" I
 
 
 --
--- TOC entry 3222 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3225 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."IsCombo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8530,8 +8562,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."IsCombo" IS 'S
 
 
 --
--- TOC entry 3223 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3226 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."IsMultiCombo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8539,8 +8571,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."IsMultiCombo" 
 
 
 --
--- TOC entry 3224 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3227 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."IsSeparator"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8548,8 +8580,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."IsSeparator" I
 
 
 --
--- TOC entry 3225 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3228 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."Posizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8557,8 +8589,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."Posizione" IS 
 
 
 --
--- TOC entry 3226 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3229 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: COLUMN "OggettiSubVersion_ListaInformazioni"."Height"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8566,7 +8598,7 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaInformazioni"."Height" IS 'Sp
 
 
 --
--- TOC entry 229 (class 1259 OID 317148)
+-- TOC entry 228 (class 1259 OID 317148)
 -- Name: OggettiSubVersion_ListaInformazioni_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -8581,8 +8613,8 @@ CREATE SEQUENCE "public"."OggettiSubVersion_ListaInformazioni_Codice_seq"
 ALTER TABLE "public"."OggettiSubVersion_ListaInformazioni_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3227 (class 0 OID 0)
--- Dependencies: 229
+-- TOC entry 3230 (class 0 OID 0)
+-- Dependencies: 228
 -- Name: OggettiSubVersion_ListaInformazioni_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -8590,7 +8622,7 @@ ALTER SEQUENCE "public"."OggettiSubVersion_ListaInformazioni_Codice_seq" OWNED B
 
 
 --
--- TOC entry 230 (class 1259 OID 317150)
+-- TOC entry 229 (class 1259 OID 317150)
 -- Name: OggettiSubVersion_ListaSchede; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -8604,8 +8636,8 @@ CREATE TABLE "public"."OggettiSubVersion_ListaSchede" (
 ALTER TABLE "public"."OggettiSubVersion_ListaSchede" OWNER TO "postgres";
 
 --
--- TOC entry 3228 (class 0 OID 0)
--- Dependencies: 230
+-- TOC entry 3231 (class 0 OID 0)
+-- Dependencies: 229
 -- Name: TABLE "OggettiSubVersion_ListaSchede"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8613,8 +8645,8 @@ COMMENT ON TABLE "public"."OggettiSubVersion_ListaSchede" IS 'Lista delle schede
 
 
 --
--- TOC entry 3229 (class 0 OID 0)
--- Dependencies: 230
+-- TOC entry 3232 (class 0 OID 0)
+-- Dependencies: 229
 -- Name: COLUMN "OggettiSubVersion_ListaSchede"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8622,8 +8654,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaSchede"."Codice" IS 'Codice r
 
 
 --
--- TOC entry 3230 (class 0 OID 0)
--- Dependencies: 230
+-- TOC entry 3233 (class 0 OID 0)
+-- Dependencies: 229
 -- Name: COLUMN "OggettiSubVersion_ListaSchede"."Titolo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8631,8 +8663,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaSchede"."Titolo" IS 'Titolo d
 
 
 --
--- TOC entry 3231 (class 0 OID 0)
--- Dependencies: 230
+-- TOC entry 3234 (class 0 OID 0)
+-- Dependencies: 229
 -- Name: COLUMN "OggettiSubVersion_ListaSchede"."Posizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8640,7 +8672,7 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_ListaSchede"."Posizione" IS 'Posiz
 
 
 --
--- TOC entry 231 (class 1259 OID 317153)
+-- TOC entry 230 (class 1259 OID 317153)
 -- Name: OggettiSubVersion_ListaSchede_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -8655,8 +8687,8 @@ CREATE SEQUENCE "public"."OggettiSubVersion_ListaSchede_Codice_seq"
 ALTER TABLE "public"."OggettiSubVersion_ListaSchede_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3232 (class 0 OID 0)
--- Dependencies: 231
+-- TOC entry 3235 (class 0 OID 0)
+-- Dependencies: 230
 -- Name: OggettiSubVersion_ListaSchede_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -8664,7 +8696,7 @@ ALTER SEQUENCE "public"."OggettiSubVersion_ListaSchede_Codice_seq" OWNED BY "pub
 
 
 --
--- TOC entry 232 (class 1259 OID 317155)
+-- TOC entry 231 (class 1259 OID 317155)
 -- Name: OggettiSubVersion_RelazioniSchede; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -8678,8 +8710,8 @@ CREATE TABLE "public"."OggettiSubVersion_RelazioniSchede" (
 ALTER TABLE "public"."OggettiSubVersion_RelazioniSchede" OWNER TO "postgres";
 
 --
--- TOC entry 3233 (class 0 OID 0)
--- Dependencies: 232
+-- TOC entry 3236 (class 0 OID 0)
+-- Dependencies: 231
 -- Name: TABLE "OggettiSubVersion_RelazioniSchede"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8687,8 +8719,8 @@ COMMENT ON TABLE "public"."OggettiSubVersion_RelazioniSchede" IS 'Relazioni tra 
 
 
 --
--- TOC entry 3234 (class 0 OID 0)
--- Dependencies: 232
+-- TOC entry 3237 (class 0 OID 0)
+-- Dependencies: 231
 -- Name: COLUMN "OggettiSubVersion_RelazioniSchede"."CodiceSubVersion"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8696,8 +8728,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_RelazioniSchede"."CodiceSubVersion
 
 
 --
--- TOC entry 3235 (class 0 OID 0)
--- Dependencies: 232
+-- TOC entry 3238 (class 0 OID 0)
+-- Dependencies: 231
 -- Name: COLUMN "OggettiSubVersion_RelazioniSchede"."CodiceTitolo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8705,8 +8737,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_RelazioniSchede"."CodiceTitolo" IS
 
 
 --
--- TOC entry 3236 (class 0 OID 0)
--- Dependencies: 232
+-- TOC entry 3239 (class 0 OID 0)
+-- Dependencies: 231
 -- Name: COLUMN "OggettiSubVersion_RelazioniSchede"."CodiceScheda"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8714,7 +8746,7 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_RelazioniSchede"."CodiceScheda" IS
 
 
 --
--- TOC entry 233 (class 1259 OID 317158)
+-- TOC entry 232 (class 1259 OID 317158)
 -- Name: OggettiSubVersion_RelazioniSchede_CodiceScheda_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -8729,8 +8761,8 @@ CREATE SEQUENCE "public"."OggettiSubVersion_RelazioniSchede_CodiceScheda_seq"
 ALTER TABLE "public"."OggettiSubVersion_RelazioniSchede_CodiceScheda_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3237 (class 0 OID 0)
--- Dependencies: 233
+-- TOC entry 3240 (class 0 OID 0)
+-- Dependencies: 232
 -- Name: OggettiSubVersion_RelazioniSchede_CodiceScheda_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -8738,7 +8770,7 @@ ALTER SEQUENCE "public"."OggettiSubVersion_RelazioniSchede_CodiceScheda_seq" OWN
 
 
 --
--- TOC entry 234 (class 1259 OID 317160)
+-- TOC entry 233 (class 1259 OID 317160)
 -- Name: OggettiSubVersion_Schede; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -8758,8 +8790,8 @@ CREATE TABLE "public"."OggettiSubVersion_Schede" (
 ALTER TABLE "public"."OggettiSubVersion_Schede" OWNER TO "postgres";
 
 --
--- TOC entry 3238 (class 0 OID 0)
--- Dependencies: 234
+-- TOC entry 3241 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: TABLE "OggettiSubVersion_Schede"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8767,8 +8799,8 @@ COMMENT ON TABLE "public"."OggettiSubVersion_Schede" IS 'Informazioni testuali s
 
 
 --
--- TOC entry 3239 (class 0 OID 0)
--- Dependencies: 234
+-- TOC entry 3242 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: COLUMN "OggettiSubVersion_Schede"."CodiceScheda"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8776,8 +8808,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_Schede"."CodiceScheda" IS 'Codice 
 
 
 --
--- TOC entry 3240 (class 0 OID 0)
--- Dependencies: 234
+-- TOC entry 3243 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: COLUMN "OggettiSubVersion_Schede"."CodiceCampo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8785,8 +8817,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_Schede"."CodiceCampo" IS 'Codice d
 
 
 --
--- TOC entry 3241 (class 0 OID 0)
--- Dependencies: 234
+-- TOC entry 3244 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: COLUMN "OggettiSubVersion_Schede"."BoolValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8794,8 +8826,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_Schede"."BoolValue" IS 'Valore boo
 
 
 --
--- TOC entry 3242 (class 0 OID 0)
--- Dependencies: 234
+-- TOC entry 3245 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: COLUMN "OggettiSubVersion_Schede"."IntValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8803,8 +8835,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_Schede"."IntValue" IS 'Valore inte
 
 
 --
--- TOC entry 3243 (class 0 OID 0)
--- Dependencies: 234
+-- TOC entry 3246 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: COLUMN "OggettiSubVersion_Schede"."RealValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8812,8 +8844,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_Schede"."RealValue" IS 'Valore rea
 
 
 --
--- TOC entry 3244 (class 0 OID 0)
--- Dependencies: 234
+-- TOC entry 3247 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: COLUMN "OggettiSubVersion_Schede"."TextValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8821,8 +8853,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_Schede"."TextValue" IS 'Valore tes
 
 
 --
--- TOC entry 3245 (class 0 OID 0)
--- Dependencies: 234
+-- TOC entry 3248 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: COLUMN "OggettiSubVersion_Schede"."TimestampValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8830,8 +8862,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_Schede"."TimestampValue" IS 'Valor
 
 
 --
--- TOC entry 3246 (class 0 OID 0)
--- Dependencies: 234
+-- TOC entry 3249 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: COLUMN "OggettiSubVersion_Schede"."ComboValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8839,8 +8871,8 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_Schede"."ComboValue" IS 'Indice de
 
 
 --
--- TOC entry 3247 (class 0 OID 0)
--- Dependencies: 234
+-- TOC entry 3250 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: COLUMN "OggettiSubVersion_Schede"."MultiComboValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8848,7 +8880,7 @@ COMMENT ON COLUMN "public"."OggettiSubVersion_Schede"."MultiComboValue" IS 'Valo
 
 
 --
--- TOC entry 235 (class 1259 OID 317166)
+-- TOC entry 234 (class 1259 OID 317166)
 -- Name: OggettiVersion_CategorieSchede; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -8861,8 +8893,8 @@ CREATE TABLE "public"."OggettiVersion_CategorieSchede" (
 ALTER TABLE "public"."OggettiVersion_CategorieSchede" OWNER TO "postgres";
 
 --
--- TOC entry 3248 (class 0 OID 0)
--- Dependencies: 235
+-- TOC entry 3251 (class 0 OID 0)
+-- Dependencies: 234
 -- Name: COLUMN "OggettiVersion_CategorieSchede"."CodiceScheda"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8870,7 +8902,7 @@ COMMENT ON COLUMN "public"."OggettiVersion_CategorieSchede"."CodiceScheda" IS 'C
 
 
 --
--- TOC entry 236 (class 1259 OID 317169)
+-- TOC entry 235 (class 1259 OID 317169)
 -- Name: OggettiVersion_InfoComboBox; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -8885,8 +8917,8 @@ CREATE TABLE "public"."OggettiVersion_InfoComboBox" (
 ALTER TABLE "public"."OggettiVersion_InfoComboBox" OWNER TO "postgres";
 
 --
--- TOC entry 3249 (class 0 OID 0)
--- Dependencies: 236
+-- TOC entry 3252 (class 0 OID 0)
+-- Dependencies: 235
 -- Name: TABLE "OggettiVersion_InfoComboBox"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8894,8 +8926,8 @@ COMMENT ON TABLE "public"."OggettiVersion_InfoComboBox" IS 'Tabella che contiene
 
 
 --
--- TOC entry 3250 (class 0 OID 0)
--- Dependencies: 236
+-- TOC entry 3253 (class 0 OID 0)
+-- Dependencies: 235
 -- Name: COLUMN "OggettiVersion_InfoComboBox"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8903,8 +8935,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_InfoComboBox"."Codice" IS 'Codice del
 
 
 --
--- TOC entry 3251 (class 0 OID 0)
--- Dependencies: 236
+-- TOC entry 3254 (class 0 OID 0)
+-- Dependencies: 235
 -- Name: COLUMN "OggettiVersion_InfoComboBox"."CodiceCampo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8912,8 +8944,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_InfoComboBox"."CodiceCampo" IS 'Codic
 
 
 --
--- TOC entry 3252 (class 0 OID 0)
--- Dependencies: 236
+-- TOC entry 3255 (class 0 OID 0)
+-- Dependencies: 235
 -- Name: COLUMN "OggettiVersion_InfoComboBox"."Value"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8921,8 +8953,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_InfoComboBox"."Value" IS 'Valore del 
 
 
 --
--- TOC entry 3253 (class 0 OID 0)
--- Dependencies: 236
+-- TOC entry 3256 (class 0 OID 0)
+-- Dependencies: 235
 -- Name: COLUMN "OggettiVersion_InfoComboBox"."Posizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8930,7 +8962,7 @@ COMMENT ON COLUMN "public"."OggettiVersion_InfoComboBox"."Posizione" IS 'Posizio
 
 
 --
--- TOC entry 237 (class 1259 OID 317172)
+-- TOC entry 236 (class 1259 OID 317172)
 -- Name: OggettiVersion_InfoComboBox_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -8945,8 +8977,8 @@ CREATE SEQUENCE "public"."OggettiVersion_InfoComboBox_Codice_seq"
 ALTER TABLE "public"."OggettiVersion_InfoComboBox_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3254 (class 0 OID 0)
--- Dependencies: 237
+-- TOC entry 3257 (class 0 OID 0)
+-- Dependencies: 236
 -- Name: OggettiVersion_InfoComboBox_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -8954,7 +8986,7 @@ ALTER SEQUENCE "public"."OggettiVersion_InfoComboBox_Codice_seq" OWNED BY "publi
 
 
 --
--- TOC entry 238 (class 1259 OID 317174)
+-- TOC entry 237 (class 1259 OID 317174)
 -- Name: OggettiVersion_ListaInformazioni; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -8980,8 +9012,8 @@ CREATE TABLE "public"."OggettiVersion_ListaInformazioni" (
 ALTER TABLE "public"."OggettiVersion_ListaInformazioni" OWNER TO "postgres";
 
 --
--- TOC entry 3255 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3258 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: TABLE "OggettiVersion_ListaInformazioni"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8989,8 +9021,8 @@ COMMENT ON TABLE "public"."OggettiVersion_ListaInformazioni" IS 'Elenco delle sc
 
 
 --
--- TOC entry 3256 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3259 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -8998,8 +9030,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."Codice" IS 'Codic
 
 
 --
--- TOC entry 3257 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3260 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."CodiceTitolo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9007,8 +9039,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."CodiceTitolo" IS 
 
 
 --
--- TOC entry 3258 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3261 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."Campo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9016,8 +9048,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."Campo" IS 'Nome d
 
 
 --
--- TOC entry 3259 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3262 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."IsTitle"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9025,8 +9057,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."IsTitle" IS 'Spec
 
 
 --
--- TOC entry 3260 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3263 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."IsLink"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9034,8 +9066,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."IsLink" IS 'Speci
 
 
 --
--- TOC entry 3261 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3264 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."IsBool"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9043,8 +9075,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."IsBool" IS 'Speci
 
 
 --
--- TOC entry 3262 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3265 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."IsInt"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9052,8 +9084,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."IsInt" IS 'Specif
 
 
 --
--- TOC entry 3263 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3266 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."IsReal"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9061,8 +9093,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."IsReal" IS 'Speci
 
 
 --
--- TOC entry 3264 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3267 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."IsText"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9070,8 +9102,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."IsText" IS 'Speci
 
 
 --
--- TOC entry 3265 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3268 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."IsTimestamp"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9079,8 +9111,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."IsTimestamp" IS '
 
 
 --
--- TOC entry 3266 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3269 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."IsCombo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9088,8 +9120,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."IsCombo" IS 'Spec
 
 
 --
--- TOC entry 3267 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3270 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."IsMultiCombo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9097,8 +9129,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."IsMultiCombo" IS 
 
 
 --
--- TOC entry 3268 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3271 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."IsSeparator"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9106,8 +9138,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."IsSeparator" IS '
 
 
 --
--- TOC entry 3269 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3272 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."Posizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9115,8 +9147,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."Posizione" IS 'Po
 
 
 --
--- TOC entry 3270 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 3273 (class 0 OID 0)
+-- Dependencies: 237
 -- Name: COLUMN "OggettiVersion_ListaInformazioni"."Height"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9124,7 +9156,7 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaInformazioni"."Height" IS 'Speci
 
 
 --
--- TOC entry 239 (class 1259 OID 317189)
+-- TOC entry 238 (class 1259 OID 317189)
 -- Name: OggettiVersion_ListaInformazioni_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -9139,8 +9171,8 @@ CREATE SEQUENCE "public"."OggettiVersion_ListaInformazioni_Codice_seq"
 ALTER TABLE "public"."OggettiVersion_ListaInformazioni_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3271 (class 0 OID 0)
--- Dependencies: 239
+-- TOC entry 3274 (class 0 OID 0)
+-- Dependencies: 238
 -- Name: OggettiVersion_ListaInformazioni_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -9148,7 +9180,7 @@ ALTER SEQUENCE "public"."OggettiVersion_ListaInformazioni_Codice_seq" OWNED BY "
 
 
 --
--- TOC entry 240 (class 1259 OID 317191)
+-- TOC entry 239 (class 1259 OID 317191)
 -- Name: OggettiVersion_ListaSchede; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -9162,8 +9194,8 @@ CREATE TABLE "public"."OggettiVersion_ListaSchede" (
 ALTER TABLE "public"."OggettiVersion_ListaSchede" OWNER TO "postgres";
 
 --
--- TOC entry 3272 (class 0 OID 0)
--- Dependencies: 240
+-- TOC entry 3275 (class 0 OID 0)
+-- Dependencies: 239
 -- Name: TABLE "OggettiVersion_ListaSchede"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9171,8 +9203,8 @@ COMMENT ON TABLE "public"."OggettiVersion_ListaSchede" IS 'Lista delle schede';
 
 
 --
--- TOC entry 3273 (class 0 OID 0)
--- Dependencies: 240
+-- TOC entry 3276 (class 0 OID 0)
+-- Dependencies: 239
 -- Name: COLUMN "OggettiVersion_ListaSchede"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9180,8 +9212,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaSchede"."Codice" IS 'Codice rife
 
 
 --
--- TOC entry 3274 (class 0 OID 0)
--- Dependencies: 240
+-- TOC entry 3277 (class 0 OID 0)
+-- Dependencies: 239
 -- Name: COLUMN "OggettiVersion_ListaSchede"."Titolo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9189,8 +9221,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaSchede"."Titolo" IS 'Titolo dell
 
 
 --
--- TOC entry 3275 (class 0 OID 0)
--- Dependencies: 240
+-- TOC entry 3278 (class 0 OID 0)
+-- Dependencies: 239
 -- Name: COLUMN "OggettiVersion_ListaSchede"."Posizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9198,7 +9230,7 @@ COMMENT ON COLUMN "public"."OggettiVersion_ListaSchede"."Posizione" IS 'Posizion
 
 
 --
--- TOC entry 241 (class 1259 OID 317194)
+-- TOC entry 240 (class 1259 OID 317194)
 -- Name: OggettiVersion_ListaSchede_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -9213,8 +9245,8 @@ CREATE SEQUENCE "public"."OggettiVersion_ListaSchede_Codice_seq"
 ALTER TABLE "public"."OggettiVersion_ListaSchede_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3276 (class 0 OID 0)
--- Dependencies: 241
+-- TOC entry 3279 (class 0 OID 0)
+-- Dependencies: 240
 -- Name: OggettiVersion_ListaSchede_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -9222,7 +9254,7 @@ ALTER SEQUENCE "public"."OggettiVersion_ListaSchede_Codice_seq" OWNED BY "public
 
 
 --
--- TOC entry 242 (class 1259 OID 317196)
+-- TOC entry 241 (class 1259 OID 317196)
 -- Name: OggettiVersion_RelazioniSchede; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -9236,8 +9268,8 @@ CREATE TABLE "public"."OggettiVersion_RelazioniSchede" (
 ALTER TABLE "public"."OggettiVersion_RelazioniSchede" OWNER TO "postgres";
 
 --
--- TOC entry 3277 (class 0 OID 0)
--- Dependencies: 242
+-- TOC entry 3280 (class 0 OID 0)
+-- Dependencies: 241
 -- Name: TABLE "OggettiVersion_RelazioniSchede"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9245,8 +9277,8 @@ COMMENT ON TABLE "public"."OggettiVersion_RelazioniSchede" IS 'Relazioni tra gli
 
 
 --
--- TOC entry 3278 (class 0 OID 0)
--- Dependencies: 242
+-- TOC entry 3281 (class 0 OID 0)
+-- Dependencies: 241
 -- Name: COLUMN "OggettiVersion_RelazioniSchede"."CodiceVersione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9254,8 +9286,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_RelazioniSchede"."CodiceVersione" IS 
 
 
 --
--- TOC entry 3279 (class 0 OID 0)
--- Dependencies: 242
+-- TOC entry 3282 (class 0 OID 0)
+-- Dependencies: 241
 -- Name: COLUMN "OggettiVersion_RelazioniSchede"."CodiceTitolo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9263,8 +9295,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_RelazioniSchede"."CodiceTitolo" IS 'C
 
 
 --
--- TOC entry 3280 (class 0 OID 0)
--- Dependencies: 242
+-- TOC entry 3283 (class 0 OID 0)
+-- Dependencies: 241
 -- Name: COLUMN "OggettiVersion_RelazioniSchede"."CodiceScheda"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9272,7 +9304,7 @@ COMMENT ON COLUMN "public"."OggettiVersion_RelazioniSchede"."CodiceScheda" IS 'C
 
 
 --
--- TOC entry 243 (class 1259 OID 317199)
+-- TOC entry 242 (class 1259 OID 317199)
 -- Name: OggettiVersion_RelazioniSchede_CodiceScheda_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -9287,8 +9319,8 @@ CREATE SEQUENCE "public"."OggettiVersion_RelazioniSchede_CodiceScheda_seq"
 ALTER TABLE "public"."OggettiVersion_RelazioniSchede_CodiceScheda_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3281 (class 0 OID 0)
--- Dependencies: 243
+-- TOC entry 3284 (class 0 OID 0)
+-- Dependencies: 242
 -- Name: OggettiVersion_RelazioniSchede_CodiceScheda_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -9296,7 +9328,7 @@ ALTER SEQUENCE "public"."OggettiVersion_RelazioniSchede_CodiceScheda_seq" OWNED 
 
 
 --
--- TOC entry 244 (class 1259 OID 317201)
+-- TOC entry 243 (class 1259 OID 317201)
 -- Name: OggettiVersion_Schede; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -9316,8 +9348,8 @@ CREATE TABLE "public"."OggettiVersion_Schede" (
 ALTER TABLE "public"."OggettiVersion_Schede" OWNER TO "postgres";
 
 --
--- TOC entry 3282 (class 0 OID 0)
--- Dependencies: 244
+-- TOC entry 3285 (class 0 OID 0)
+-- Dependencies: 243
 -- Name: TABLE "OggettiVersion_Schede"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9325,8 +9357,8 @@ COMMENT ON TABLE "public"."OggettiVersion_Schede" IS 'Informazioni testuali sugl
 
 
 --
--- TOC entry 3283 (class 0 OID 0)
--- Dependencies: 244
+-- TOC entry 3286 (class 0 OID 0)
+-- Dependencies: 243
 -- Name: COLUMN "OggettiVersion_Schede"."CodiceScheda"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9334,8 +9366,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_Schede"."CodiceScheda" IS 'Codice del
 
 
 --
--- TOC entry 3284 (class 0 OID 0)
--- Dependencies: 244
+-- TOC entry 3287 (class 0 OID 0)
+-- Dependencies: 243
 -- Name: COLUMN "OggettiVersion_Schede"."CodiceCampo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9343,8 +9375,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_Schede"."CodiceCampo" IS 'Codice del 
 
 
 --
--- TOC entry 3285 (class 0 OID 0)
--- Dependencies: 244
+-- TOC entry 3288 (class 0 OID 0)
+-- Dependencies: 243
 -- Name: COLUMN "OggettiVersion_Schede"."BoolValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9352,8 +9384,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_Schede"."BoolValue" IS 'Valore boolea
 
 
 --
--- TOC entry 3286 (class 0 OID 0)
--- Dependencies: 244
+-- TOC entry 3289 (class 0 OID 0)
+-- Dependencies: 243
 -- Name: COLUMN "OggettiVersion_Schede"."IntValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9361,8 +9393,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_Schede"."IntValue" IS 'Valore intero'
 
 
 --
--- TOC entry 3287 (class 0 OID 0)
--- Dependencies: 244
+-- TOC entry 3290 (class 0 OID 0)
+-- Dependencies: 243
 -- Name: COLUMN "OggettiVersion_Schede"."RealValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9370,8 +9402,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_Schede"."RealValue" IS 'Valore reale'
 
 
 --
--- TOC entry 3288 (class 0 OID 0)
--- Dependencies: 244
+-- TOC entry 3291 (class 0 OID 0)
+-- Dependencies: 243
 -- Name: COLUMN "OggettiVersion_Schede"."TextValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9379,8 +9411,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_Schede"."TextValue" IS 'Valore testo 
 
 
 --
--- TOC entry 3289 (class 0 OID 0)
--- Dependencies: 244
+-- TOC entry 3292 (class 0 OID 0)
+-- Dependencies: 243
 -- Name: COLUMN "OggettiVersion_Schede"."TimestampValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9388,8 +9420,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_Schede"."TimestampValue" IS 'Valore t
 
 
 --
--- TOC entry 3290 (class 0 OID 0)
--- Dependencies: 244
+-- TOC entry 3293 (class 0 OID 0)
+-- Dependencies: 243
 -- Name: COLUMN "OggettiVersion_Schede"."ComboValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9397,8 +9429,8 @@ COMMENT ON COLUMN "public"."OggettiVersion_Schede"."ComboValue" IS 'Indice del C
 
 
 --
--- TOC entry 3291 (class 0 OID 0)
--- Dependencies: 244
+-- TOC entry 3294 (class 0 OID 0)
+-- Dependencies: 243
 -- Name: COLUMN "OggettiVersion_Schede"."MultiComboValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9406,7 +9438,7 @@ COMMENT ON COLUMN "public"."OggettiVersion_Schede"."MultiComboValue" IS 'Valore 
 
 
 --
--- TOC entry 245 (class 1259 OID 317207)
+-- TOC entry 244 (class 1259 OID 317207)
 -- Name: Oggetti_CategorieSchede; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -9419,8 +9451,8 @@ CREATE TABLE "public"."Oggetti_CategorieSchede" (
 ALTER TABLE "public"."Oggetti_CategorieSchede" OWNER TO "postgres";
 
 --
--- TOC entry 3292 (class 0 OID 0)
--- Dependencies: 245
+-- TOC entry 3295 (class 0 OID 0)
+-- Dependencies: 244
 -- Name: COLUMN "Oggetti_CategorieSchede"."CodiceScheda"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9428,7 +9460,7 @@ COMMENT ON COLUMN "public"."Oggetti_CategorieSchede"."CodiceScheda" IS 'Codice d
 
 
 --
--- TOC entry 246 (class 1259 OID 317210)
+-- TOC entry 245 (class 1259 OID 317210)
 -- Name: Oggetti_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -9443,8 +9475,8 @@ CREATE SEQUENCE "public"."Oggetti_Codice_seq"
 ALTER TABLE "public"."Oggetti_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3293 (class 0 OID 0)
--- Dependencies: 246
+-- TOC entry 3296 (class 0 OID 0)
+-- Dependencies: 245
 -- Name: Oggetti_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -9452,7 +9484,7 @@ ALTER SEQUENCE "public"."Oggetti_Codice_seq" OWNED BY "public"."Oggetti"."Codice
 
 
 --
--- TOC entry 247 (class 1259 OID 317212)
+-- TOC entry 246 (class 1259 OID 317212)
 -- Name: Oggetti_InfoComboBox; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -9467,8 +9499,8 @@ CREATE TABLE "public"."Oggetti_InfoComboBox" (
 ALTER TABLE "public"."Oggetti_InfoComboBox" OWNER TO "postgres";
 
 --
--- TOC entry 3294 (class 0 OID 0)
--- Dependencies: 247
+-- TOC entry 3297 (class 0 OID 0)
+-- Dependencies: 246
 -- Name: TABLE "Oggetti_InfoComboBox"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9476,8 +9508,8 @@ COMMENT ON TABLE "public"."Oggetti_InfoComboBox" IS 'Tabella che contiene i valo
 
 
 --
--- TOC entry 3295 (class 0 OID 0)
--- Dependencies: 247
+-- TOC entry 3298 (class 0 OID 0)
+-- Dependencies: 246
 -- Name: COLUMN "Oggetti_InfoComboBox"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9485,8 +9517,8 @@ COMMENT ON COLUMN "public"."Oggetti_InfoComboBox"."Codice" IS 'Codice del campo'
 
 
 --
--- TOC entry 3296 (class 0 OID 0)
--- Dependencies: 247
+-- TOC entry 3299 (class 0 OID 0)
+-- Dependencies: 246
 -- Name: COLUMN "Oggetti_InfoComboBox"."CodiceCampo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9494,8 +9526,8 @@ COMMENT ON COLUMN "public"."Oggetti_InfoComboBox"."CodiceCampo" IS 'Codice del c
 
 
 --
--- TOC entry 3297 (class 0 OID 0)
--- Dependencies: 247
+-- TOC entry 3300 (class 0 OID 0)
+-- Dependencies: 246
 -- Name: COLUMN "Oggetti_InfoComboBox"."Value"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9503,8 +9535,8 @@ COMMENT ON COLUMN "public"."Oggetti_InfoComboBox"."Value" IS 'Valore del campo';
 
 
 --
--- TOC entry 3298 (class 0 OID 0)
--- Dependencies: 247
+-- TOC entry 3301 (class 0 OID 0)
+-- Dependencies: 246
 -- Name: COLUMN "Oggetti_InfoComboBox"."Posizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9512,7 +9544,7 @@ COMMENT ON COLUMN "public"."Oggetti_InfoComboBox"."Posizione" IS 'Posizione dell
 
 
 --
--- TOC entry 248 (class 1259 OID 317215)
+-- TOC entry 247 (class 1259 OID 317215)
 -- Name: Oggetti_InfoComboBox_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -9527,8 +9559,8 @@ CREATE SEQUENCE "public"."Oggetti_InfoComboBox_Codice_seq"
 ALTER TABLE "public"."Oggetti_InfoComboBox_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3299 (class 0 OID 0)
--- Dependencies: 248
+-- TOC entry 3302 (class 0 OID 0)
+-- Dependencies: 247
 -- Name: Oggetti_InfoComboBox_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -9536,7 +9568,7 @@ ALTER SEQUENCE "public"."Oggetti_InfoComboBox_Codice_seq" OWNED BY "public"."Ogg
 
 
 --
--- TOC entry 249 (class 1259 OID 317217)
+-- TOC entry 248 (class 1259 OID 317217)
 -- Name: Oggetti_ListaInformazioni; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -9562,8 +9594,8 @@ CREATE TABLE "public"."Oggetti_ListaInformazioni" (
 ALTER TABLE "public"."Oggetti_ListaInformazioni" OWNER TO "postgres";
 
 --
--- TOC entry 3300 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3303 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: TABLE "Oggetti_ListaInformazioni"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9571,8 +9603,8 @@ COMMENT ON TABLE "public"."Oggetti_ListaInformazioni" IS 'Elenco delle schedee d
 
 
 --
--- TOC entry 3301 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3304 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9580,8 +9612,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."Codice" IS 'Codice del c
 
 
 --
--- TOC entry 3302 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3305 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."CodiceTitolo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9589,8 +9621,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."CodiceTitolo" IS 'Codice
 
 
 --
--- TOC entry 3303 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3306 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."Campo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9598,8 +9630,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."Campo" IS 'Nome del camp
 
 
 --
--- TOC entry 3304 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3307 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."IsTitle"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9607,8 +9639,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."IsTitle" IS 'Specifica s
 
 
 --
--- TOC entry 3305 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3308 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."IsLink"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9616,8 +9648,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."IsLink" IS 'Specifica se
 
 
 --
--- TOC entry 3306 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3309 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."IsBool"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9625,8 +9657,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."IsBool" IS 'Specifica se
 
 
 --
--- TOC entry 3307 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3310 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."IsInt"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9634,8 +9666,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."IsInt" IS 'Specifica se 
 
 
 --
--- TOC entry 3308 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3311 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."IsReal"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9643,8 +9675,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."IsReal" IS 'Specifica se
 
 
 --
--- TOC entry 3309 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3312 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."IsText"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9652,8 +9684,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."IsText" IS 'Specifica se
 
 
 --
--- TOC entry 3310 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3313 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."IsTimestamp"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9661,8 +9693,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."IsTimestamp" IS 'Specifi
 
 
 --
--- TOC entry 3311 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3314 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."IsCombo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9670,8 +9702,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."IsCombo" IS 'Specifica s
 
 
 --
--- TOC entry 3312 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3315 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."IsMultiCombo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9679,8 +9711,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."IsMultiCombo" IS 'Specif
 
 
 --
--- TOC entry 3313 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3316 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."IsSeparator"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9688,8 +9720,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."IsSeparator" IS 'Specifi
 
 
 --
--- TOC entry 3314 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3317 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."Posizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9697,8 +9729,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."Posizione" IS 'Posizione
 
 
 --
--- TOC entry 3315 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 3318 (class 0 OID 0)
+-- Dependencies: 248
 -- Name: COLUMN "Oggetti_ListaInformazioni"."Height"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9706,7 +9738,7 @@ COMMENT ON COLUMN "public"."Oggetti_ListaInformazioni"."Height" IS 'Specifica l'
 
 
 --
--- TOC entry 250 (class 1259 OID 317232)
+-- TOC entry 249 (class 1259 OID 317232)
 -- Name: Oggetti_ListaInformazioni_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -9721,8 +9753,8 @@ CREATE SEQUENCE "public"."Oggetti_ListaInformazioni_Codice_seq"
 ALTER TABLE "public"."Oggetti_ListaInformazioni_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3316 (class 0 OID 0)
--- Dependencies: 250
+-- TOC entry 3319 (class 0 OID 0)
+-- Dependencies: 249
 -- Name: Oggetti_ListaInformazioni_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -9730,7 +9762,7 @@ ALTER SEQUENCE "public"."Oggetti_ListaInformazioni_Codice_seq" OWNED BY "public"
 
 
 --
--- TOC entry 251 (class 1259 OID 317234)
+-- TOC entry 250 (class 1259 OID 317234)
 -- Name: Oggetti_ListaSchede; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -9744,8 +9776,8 @@ CREATE TABLE "public"."Oggetti_ListaSchede" (
 ALTER TABLE "public"."Oggetti_ListaSchede" OWNER TO "postgres";
 
 --
--- TOC entry 3317 (class 0 OID 0)
--- Dependencies: 251
+-- TOC entry 3320 (class 0 OID 0)
+-- Dependencies: 250
 -- Name: TABLE "Oggetti_ListaSchede"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9753,8 +9785,8 @@ COMMENT ON TABLE "public"."Oggetti_ListaSchede" IS 'Lista delle schede';
 
 
 --
--- TOC entry 3318 (class 0 OID 0)
--- Dependencies: 251
+-- TOC entry 3321 (class 0 OID 0)
+-- Dependencies: 250
 -- Name: COLUMN "Oggetti_ListaSchede"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9762,8 +9794,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaSchede"."Codice" IS 'Codice riferito al
 
 
 --
--- TOC entry 3319 (class 0 OID 0)
--- Dependencies: 251
+-- TOC entry 3322 (class 0 OID 0)
+-- Dependencies: 250
 -- Name: COLUMN "Oggetti_ListaSchede"."Titolo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9771,8 +9803,8 @@ COMMENT ON COLUMN "public"."Oggetti_ListaSchede"."Titolo" IS 'Titolo delle sched
 
 
 --
--- TOC entry 3320 (class 0 OID 0)
--- Dependencies: 251
+-- TOC entry 3323 (class 0 OID 0)
+-- Dependencies: 250
 -- Name: COLUMN "Oggetti_ListaSchede"."Posizione"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9780,7 +9812,7 @@ COMMENT ON COLUMN "public"."Oggetti_ListaSchede"."Posizione" IS 'Posizione della
 
 
 --
--- TOC entry 252 (class 1259 OID 317237)
+-- TOC entry 251 (class 1259 OID 317237)
 -- Name: Oggetti_ListaSchede_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -9795,8 +9827,8 @@ CREATE SEQUENCE "public"."Oggetti_ListaSchede_Codice_seq"
 ALTER TABLE "public"."Oggetti_ListaSchede_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3321 (class 0 OID 0)
--- Dependencies: 252
+-- TOC entry 3324 (class 0 OID 0)
+-- Dependencies: 251
 -- Name: Oggetti_ListaSchede_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -9804,7 +9836,7 @@ ALTER SEQUENCE "public"."Oggetti_ListaSchede_Codice_seq" OWNED BY "public"."Ogge
 
 
 --
--- TOC entry 253 (class 1259 OID 317239)
+-- TOC entry 252 (class 1259 OID 317239)
 -- Name: Oggetti_RelazioniSchede; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -9818,8 +9850,8 @@ CREATE TABLE "public"."Oggetti_RelazioniSchede" (
 ALTER TABLE "public"."Oggetti_RelazioniSchede" OWNER TO "postgres";
 
 --
--- TOC entry 3322 (class 0 OID 0)
--- Dependencies: 253
+-- TOC entry 3325 (class 0 OID 0)
+-- Dependencies: 252
 -- Name: TABLE "Oggetti_RelazioniSchede"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9827,8 +9859,8 @@ COMMENT ON TABLE "public"."Oggetti_RelazioniSchede" IS 'Relazioni tra gli oggett
 
 
 --
--- TOC entry 3323 (class 0 OID 0)
--- Dependencies: 253
+-- TOC entry 3326 (class 0 OID 0)
+-- Dependencies: 252
 -- Name: COLUMN "Oggetti_RelazioniSchede"."CodiceOggetto"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9836,8 +9868,8 @@ COMMENT ON COLUMN "public"."Oggetti_RelazioniSchede"."CodiceOggetto" IS 'Codice 
 
 
 --
--- TOC entry 3324 (class 0 OID 0)
--- Dependencies: 253
+-- TOC entry 3327 (class 0 OID 0)
+-- Dependencies: 252
 -- Name: COLUMN "Oggetti_RelazioniSchede"."CodiceTitolo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9845,8 +9877,8 @@ COMMENT ON COLUMN "public"."Oggetti_RelazioniSchede"."CodiceTitolo" IS 'Codice d
 
 
 --
--- TOC entry 3325 (class 0 OID 0)
--- Dependencies: 253
+-- TOC entry 3328 (class 0 OID 0)
+-- Dependencies: 252
 -- Name: COLUMN "Oggetti_RelazioniSchede"."CodiceScheda"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9854,7 +9886,7 @@ COMMENT ON COLUMN "public"."Oggetti_RelazioniSchede"."CodiceScheda" IS 'Codice d
 
 
 --
--- TOC entry 254 (class 1259 OID 317242)
+-- TOC entry 253 (class 1259 OID 317242)
 -- Name: Oggetti_RelazioniSchede_CodiceScheda_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -9869,8 +9901,8 @@ CREATE SEQUENCE "public"."Oggetti_RelazioniSchede_CodiceScheda_seq"
 ALTER TABLE "public"."Oggetti_RelazioniSchede_CodiceScheda_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3326 (class 0 OID 0)
--- Dependencies: 254
+-- TOC entry 3329 (class 0 OID 0)
+-- Dependencies: 253
 -- Name: Oggetti_RelazioniSchede_CodiceScheda_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -9878,7 +9910,7 @@ ALTER SEQUENCE "public"."Oggetti_RelazioniSchede_CodiceScheda_seq" OWNED BY "pub
 
 
 --
--- TOC entry 255 (class 1259 OID 317244)
+-- TOC entry 254 (class 1259 OID 317244)
 -- Name: Oggetti_Schede; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -9898,8 +9930,8 @@ CREATE TABLE "public"."Oggetti_Schede" (
 ALTER TABLE "public"."Oggetti_Schede" OWNER TO "postgres";
 
 --
--- TOC entry 3327 (class 0 OID 0)
--- Dependencies: 255
+-- TOC entry 3330 (class 0 OID 0)
+-- Dependencies: 254
 -- Name: TABLE "Oggetti_Schede"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9907,8 +9939,8 @@ COMMENT ON TABLE "public"."Oggetti_Schede" IS 'Informazioni testuali sugli ogget
 
 
 --
--- TOC entry 3328 (class 0 OID 0)
--- Dependencies: 255
+-- TOC entry 3331 (class 0 OID 0)
+-- Dependencies: 254
 -- Name: COLUMN "Oggetti_Schede"."CodiceScheda"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9916,8 +9948,8 @@ COMMENT ON COLUMN "public"."Oggetti_Schede"."CodiceScheda" IS 'Codice della sche
 
 
 --
--- TOC entry 3329 (class 0 OID 0)
--- Dependencies: 255
+-- TOC entry 3332 (class 0 OID 0)
+-- Dependencies: 254
 -- Name: COLUMN "Oggetti_Schede"."CodiceCampo"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9925,8 +9957,8 @@ COMMENT ON COLUMN "public"."Oggetti_Schede"."CodiceCampo" IS 'Codice del campo';
 
 
 --
--- TOC entry 3330 (class 0 OID 0)
--- Dependencies: 255
+-- TOC entry 3333 (class 0 OID 0)
+-- Dependencies: 254
 -- Name: COLUMN "Oggetti_Schede"."BoolValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9934,8 +9966,8 @@ COMMENT ON COLUMN "public"."Oggetti_Schede"."BoolValue" IS 'Valore booleano';
 
 
 --
--- TOC entry 3331 (class 0 OID 0)
--- Dependencies: 255
+-- TOC entry 3334 (class 0 OID 0)
+-- Dependencies: 254
 -- Name: COLUMN "Oggetti_Schede"."IntValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9943,8 +9975,8 @@ COMMENT ON COLUMN "public"."Oggetti_Schede"."IntValue" IS 'Valore intero';
 
 
 --
--- TOC entry 3332 (class 0 OID 0)
--- Dependencies: 255
+-- TOC entry 3335 (class 0 OID 0)
+-- Dependencies: 254
 -- Name: COLUMN "Oggetti_Schede"."RealValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9952,8 +9984,8 @@ COMMENT ON COLUMN "public"."Oggetti_Schede"."RealValue" IS 'Valore reale';
 
 
 --
--- TOC entry 3333 (class 0 OID 0)
--- Dependencies: 255
+-- TOC entry 3336 (class 0 OID 0)
+-- Dependencies: 254
 -- Name: COLUMN "Oggetti_Schede"."TextValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9961,8 +9993,8 @@ COMMENT ON COLUMN "public"."Oggetti_Schede"."TextValue" IS 'Valore testo o multi
 
 
 --
--- TOC entry 3334 (class 0 OID 0)
--- Dependencies: 255
+-- TOC entry 3337 (class 0 OID 0)
+-- Dependencies: 254
 -- Name: COLUMN "Oggetti_Schede"."TimestampValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9970,8 +10002,8 @@ COMMENT ON COLUMN "public"."Oggetti_Schede"."TimestampValue" IS 'Valore timestam
 
 
 --
--- TOC entry 3335 (class 0 OID 0)
--- Dependencies: 255
+-- TOC entry 3338 (class 0 OID 0)
+-- Dependencies: 254
 -- Name: COLUMN "Oggetti_Schede"."ComboValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9979,8 +10011,8 @@ COMMENT ON COLUMN "public"."Oggetti_Schede"."ComboValue" IS 'Indice del ComboBox
 
 
 --
--- TOC entry 3336 (class 0 OID 0)
--- Dependencies: 255
+-- TOC entry 3339 (class 0 OID 0)
+-- Dependencies: 254
 -- Name: COLUMN "Oggetti_Schede"."MultiComboValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -9988,7 +10020,7 @@ COMMENT ON COLUMN "public"."Oggetti_Schede"."MultiComboValue" IS 'Valore di un c
 
 
 --
--- TOC entry 256 (class 1259 OID 317250)
+-- TOC entry 255 (class 1259 OID 317250)
 -- Name: Oggetti_SubVersion_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -10003,8 +10035,8 @@ CREATE SEQUENCE "public"."Oggetti_SubVersion_Codice_seq"
 ALTER TABLE "public"."Oggetti_SubVersion_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3337 (class 0 OID 0)
--- Dependencies: 256
+-- TOC entry 3340 (class 0 OID 0)
+-- Dependencies: 255
 -- Name: Oggetti_SubVersion_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -10012,7 +10044,7 @@ ALTER SEQUENCE "public"."Oggetti_SubVersion_Codice_seq" OWNED BY "public"."Ogget
 
 
 --
--- TOC entry 257 (class 1259 OID 317252)
+-- TOC entry 256 (class 1259 OID 317252)
 -- Name: Oggetti_Versioni_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -10027,8 +10059,8 @@ CREATE SEQUENCE "public"."Oggetti_Versioni_Codice_seq"
 ALTER TABLE "public"."Oggetti_Versioni_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3338 (class 0 OID 0)
--- Dependencies: 257
+-- TOC entry 3341 (class 0 OID 0)
+-- Dependencies: 256
 -- Name: Oggetti_Versioni_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -10036,7 +10068,7 @@ ALTER SEQUENCE "public"."Oggetti_Versioni_Codice_seq" OWNED BY "public"."Oggetti
 
 
 --
--- TOC entry 263 (class 1259 OID 327733)
+-- TOC entry 262 (class 1259 OID 327733)
 -- Name: PhotogrammetryPhotoDataOggetti; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -10069,8 +10101,8 @@ CREATE TABLE "public"."PhotogrammetryPhotoDataOggetti" (
 ALTER TABLE "public"."PhotogrammetryPhotoDataOggetti" OWNER TO "postgres";
 
 --
--- TOC entry 3339 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3342 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10078,8 +10110,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."Codice" IS 'Codice 
 
 
 --
--- TOC entry 3340 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3343 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."CodicePhotogrammetryProjectData"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10087,8 +10119,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."CodicePhotogrammetr
 
 
 --
--- TOC entry 3341 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3344 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."CodiceOggetto"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10096,8 +10128,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."CodiceOggetto" IS '
 
 
 --
--- TOC entry 3342 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3345 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."URL"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10105,8 +10137,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."URL" IS 'URL dell''
 
 
 --
--- TOC entry 3343 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3346 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf11"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10114,8 +10146,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf11" IS 'transform
 
 
 --
--- TOC entry 3344 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3347 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf12"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10123,8 +10155,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf12" IS 'transform
 
 
 --
--- TOC entry 3345 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3348 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf13"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10132,8 +10164,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf13" IS 'transform
 
 
 --
--- TOC entry 3346 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3349 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf14"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10141,8 +10173,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf14" IS 'transform
 
 
 --
--- TOC entry 3347 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3350 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf21"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10150,8 +10182,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf21" IS 'transform
 
 
 --
--- TOC entry 3348 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3351 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf22"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10159,8 +10191,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf22" IS 'transform
 
 
 --
--- TOC entry 3349 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3352 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf23"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10168,8 +10200,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf23" IS 'transform
 
 
 --
--- TOC entry 3350 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3353 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf24"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10177,8 +10209,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf24" IS 'transform
 
 
 --
--- TOC entry 3351 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3354 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf31"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10186,8 +10218,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf31" IS 'transform
 
 
 --
--- TOC entry 3352 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3355 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf32"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10195,8 +10227,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf32" IS 'transform
 
 
 --
--- TOC entry 3353 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3356 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf33"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10204,8 +10236,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf33" IS 'transform
 
 
 --
--- TOC entry 3354 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3357 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf34"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10213,8 +10245,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf34" IS 'transform
 
 
 --
--- TOC entry 3355 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3358 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf41"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10222,8 +10254,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf41" IS 'transform
 
 
 --
--- TOC entry 3356 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3359 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf42"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10231,8 +10263,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf42" IS 'transform
 
 
 --
--- TOC entry 3357 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3360 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf43"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10240,8 +10272,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf43" IS 'transform
 
 
 --
--- TOC entry 3358 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3361 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."tf44"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10249,8 +10281,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."tf44" IS 'transform
 
 
 --
--- TOC entry 3359 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3362 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."imageWidth"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10258,8 +10290,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."imageWidth" IS 'Wid
 
 
 --
--- TOC entry 3360 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 3363 (class 0 OID 0)
+-- Dependencies: 262
 -- Name: COLUMN "PhotogrammetryPhotoDataOggetti"."imageHeight"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10267,7 +10299,7 @@ COMMENT ON COLUMN "public"."PhotogrammetryPhotoDataOggetti"."imageHeight" IS 'He
 
 
 --
--- TOC entry 262 (class 1259 OID 327731)
+-- TOC entry 261 (class 1259 OID 327731)
 -- Name: PhotogrammetryPhotoDataOggetti_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -10282,8 +10314,8 @@ CREATE SEQUENCE "public"."PhotogrammetryPhotoDataOggetti_Codice_seq"
 ALTER TABLE "public"."PhotogrammetryPhotoDataOggetti_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3361 (class 0 OID 0)
--- Dependencies: 262
+-- TOC entry 3364 (class 0 OID 0)
+-- Dependencies: 261
 -- Name: PhotogrammetryPhotoDataOggetti_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -10291,7 +10323,7 @@ ALTER SEQUENCE "public"."PhotogrammetryPhotoDataOggetti_Codice_seq" OWNED BY "pu
 
 
 --
--- TOC entry 261 (class 1259 OID 327664)
+-- TOC entry 260 (class 1259 OID 327664)
 -- Name: PhotogrammetryProjectData; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -10331,8 +10363,8 @@ CREATE TABLE "public"."PhotogrammetryProjectData" (
 ALTER TABLE "public"."PhotogrammetryProjectData" OWNER TO "postgres";
 
 --
--- TOC entry 3362 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3365 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."Codice"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10340,8 +10372,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."Codice" IS 'Codice del g
 
 
 --
--- TOC entry 3363 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3366 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."CodiceModello"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10349,8 +10381,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."CodiceModello" IS 'Codic
 
 
 --
--- TOC entry 3364 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3367 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."Chunk"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10358,8 +10390,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."Chunk" IS 'Numero del ch
 
 
 --
--- TOC entry 3365 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3368 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."f"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10367,8 +10399,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."f" IS 'focal length';
 
 
 --
--- TOC entry 3366 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3369 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."cx"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10376,8 +10408,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."cx" IS 'principal point 
 
 
 --
--- TOC entry 3367 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3370 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."cy"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10385,8 +10417,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."cy" IS 'principal point 
 
 
 --
--- TOC entry 3368 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3371 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."k1"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10394,8 +10426,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."k1" IS 'radial distortio
 
 
 --
--- TOC entry 3369 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3372 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."k2"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10403,8 +10435,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."k2" IS 'radial distortio
 
 
 --
--- TOC entry 3370 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3373 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."k3"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10412,8 +10444,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."k3" IS 'radial distortio
 
 
 --
--- TOC entry 3371 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3374 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."k4"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10421,8 +10453,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."k4" IS 'radial distortio
 
 
 --
--- TOC entry 3372 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3375 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."p1"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10430,8 +10462,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."p1" IS 'tangential disto
 
 
 --
--- TOC entry 3373 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3376 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."p2"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10439,8 +10471,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."p2" IS 'tangential disto
 
 
 --
--- TOC entry 3374 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3377 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."p3"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10448,8 +10480,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."p3" IS 'tangential disto
 
 
 --
--- TOC entry 3375 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3378 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."p4"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10457,8 +10489,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."p4" IS 'tangential disto
 
 
 --
--- TOC entry 3376 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3379 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."b1"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10466,8 +10498,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."b1" IS 'affinity and non
 
 
 --
--- TOC entry 3377 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3380 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."b2"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10475,8 +10507,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."b2" IS 'affinity and non
 
 
 --
--- TOC entry 3378 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3381 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."r11"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10484,8 +10516,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."r11" IS 'rotation - 11';
 
 
 --
--- TOC entry 3379 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3382 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."r12"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10493,8 +10525,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."r12" IS 'rotation - 12';
 
 
 --
--- TOC entry 3380 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3383 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."r13"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10502,8 +10534,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."r13" IS 'rotation - 13';
 
 
 --
--- TOC entry 3381 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3384 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."r21"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10511,8 +10543,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."r21" IS 'rotation - 21';
 
 
 --
--- TOC entry 3382 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3385 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."r22"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10520,8 +10552,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."r22" IS 'rotation - 22';
 
 
 --
--- TOC entry 3383 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3386 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."r23"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10529,8 +10561,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."r23" IS 'rotation - 23';
 
 
 --
--- TOC entry 3384 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3387 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."r31"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10538,8 +10570,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."r31" IS 'rotation - 31';
 
 
 --
--- TOC entry 3385 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3388 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."r32"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10547,8 +10579,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."r32" IS 'rotation - 32';
 
 
 --
--- TOC entry 3386 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3389 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."r33"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10556,8 +10588,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."r33" IS 'rotation - 33';
 
 
 --
--- TOC entry 3387 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3390 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."t1"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10565,8 +10597,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."t1" IS 'translation - 1'
 
 
 --
--- TOC entry 3388 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3391 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."t2"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10574,8 +10606,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."t2" IS 'translation - 2'
 
 
 --
--- TOC entry 3389 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3392 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."t3"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10583,8 +10615,8 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."t3" IS 'translation - 3'
 
 
 --
--- TOC entry 3390 (class 0 OID 0)
--- Dependencies: 261
+-- TOC entry 3393 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: COLUMN "PhotogrammetryProjectData"."scale"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10592,7 +10624,7 @@ COMMENT ON COLUMN "public"."PhotogrammetryProjectData"."scale" IS 'scale';
 
 
 --
--- TOC entry 260 (class 1259 OID 327662)
+-- TOC entry 259 (class 1259 OID 327662)
 -- Name: PhotogrammetryProjectData_Codice_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -10607,8 +10639,8 @@ CREATE SEQUENCE "public"."PhotogrammetryProjectData_Codice_seq"
 ALTER TABLE "public"."PhotogrammetryProjectData_Codice_seq" OWNER TO "postgres";
 
 --
--- TOC entry 3391 (class 0 OID 0)
--- Dependencies: 260
+-- TOC entry 3394 (class 0 OID 0)
+-- Dependencies: 259
 -- Name: PhotogrammetryProjectData_Codice_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -10616,7 +10648,7 @@ ALTER SEQUENCE "public"."PhotogrammetryProjectData_Codice_seq" OWNED BY "public"
 
 
 --
--- TOC entry 258 (class 1259 OID 317254)
+-- TOC entry 257 (class 1259 OID 317254)
 -- Name: Settings; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -10632,8 +10664,8 @@ CREATE TABLE "public"."Settings" (
 ALTER TABLE "public"."Settings" OWNER TO "postgres";
 
 --
--- TOC entry 3392 (class 0 OID 0)
--- Dependencies: 258
+-- TOC entry 3395 (class 0 OID 0)
+-- Dependencies: 257
 -- Name: TABLE "Settings"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10641,8 +10673,8 @@ COMMENT ON TABLE "public"."Settings" IS 'Tabella che contiene i vari settings de
 
 
 --
--- TOC entry 3393 (class 0 OID 0)
--- Dependencies: 258
+-- TOC entry 3396 (class 0 OID 0)
+-- Dependencies: 257
 -- Name: COLUMN "Settings"."Key"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10650,8 +10682,8 @@ COMMENT ON COLUMN "public"."Settings"."Key" IS 'Chiave del setting';
 
 
 --
--- TOC entry 3394 (class 0 OID 0)
--- Dependencies: 258
+-- TOC entry 3397 (class 0 OID 0)
+-- Dependencies: 257
 -- Name: COLUMN "Settings"."TextValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10659,8 +10691,8 @@ COMMENT ON COLUMN "public"."Settings"."TextValue" IS 'Valore testo del setting';
 
 
 --
--- TOC entry 3395 (class 0 OID 0)
--- Dependencies: 258
+-- TOC entry 3398 (class 0 OID 0)
+-- Dependencies: 257
 -- Name: COLUMN "Settings"."IntValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10668,8 +10700,8 @@ COMMENT ON COLUMN "public"."Settings"."IntValue" IS 'Valore integer del setting'
 
 
 --
--- TOC entry 3396 (class 0 OID 0)
--- Dependencies: 258
+-- TOC entry 3399 (class 0 OID 0)
+-- Dependencies: 257
 -- Name: COLUMN "Settings"."RealValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10677,8 +10709,8 @@ COMMENT ON COLUMN "public"."Settings"."RealValue" IS 'Valore real del setting';
 
 
 --
--- TOC entry 3397 (class 0 OID 0)
--- Dependencies: 258
+-- TOC entry 3400 (class 0 OID 0)
+-- Dependencies: 257
 -- Name: COLUMN "Settings"."BoolValue"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10686,7 +10718,7 @@ COMMENT ON COLUMN "public"."Settings"."BoolValue" IS 'Valore boolean del setting
 
 
 --
--- TOC entry 259 (class 1259 OID 317260)
+-- TOC entry 258 (class 1259 OID 317260)
 -- Name: Utenti; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -10701,8 +10733,8 @@ CREATE TABLE "public"."Utenti" (
 ALTER TABLE "public"."Utenti" OWNER TO "postgres";
 
 --
--- TOC entry 3398 (class 0 OID 0)
--- Dependencies: 259
+-- TOC entry 3401 (class 0 OID 0)
+-- Dependencies: 258
 -- Name: TABLE "Utenti"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10710,8 +10742,8 @@ COMMENT ON TABLE "public"."Utenti" IS 'Tabella accessi e permessi';
 
 
 --
--- TOC entry 3399 (class 0 OID 0)
--- Dependencies: 259
+-- TOC entry 3402 (class 0 OID 0)
+-- Dependencies: 258
 -- Name: COLUMN "Utenti"."User"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10719,8 +10751,8 @@ COMMENT ON COLUMN "public"."Utenti"."User" IS 'Nome utente';
 
 
 --
--- TOC entry 3400 (class 0 OID 0)
--- Dependencies: 259
+-- TOC entry 3403 (class 0 OID 0)
+-- Dependencies: 258
 -- Name: COLUMN "Utenti"."Password"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10728,8 +10760,8 @@ COMMENT ON COLUMN "public"."Utenti"."Password" IS 'Password dell''account';
 
 
 --
--- TOC entry 3401 (class 0 OID 0)
--- Dependencies: 259
+-- TOC entry 3404 (class 0 OID 0)
+-- Dependencies: 258
 -- Name: COLUMN "Utenti"."FullName"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10737,8 +10769,8 @@ COMMENT ON COLUMN "public"."Utenti"."FullName" IS 'Nome e cognome reale';
 
 
 --
--- TOC entry 3402 (class 0 OID 0)
--- Dependencies: 259
+-- TOC entry 3405 (class 0 OID 0)
+-- Dependencies: 258
 -- Name: COLUMN "Utenti"."Gruppi"; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -10826,7 +10858,7 @@ ALTER TABLE ONLY "public"."Oggetti" ALTER COLUMN "Codice" SET DEFAULT "nextval"(
 
 
 --
--- TOC entry 2495 (class 2604 OID 317276)
+-- TOC entry 2490 (class 2604 OID 317276)
 -- Name: OggettiSubVersion Codice; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10834,7 +10866,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion" ALTER COLUMN "Codice" SET DEFAULT 
 
 
 --
--- TOC entry 2496 (class 2604 OID 317277)
+-- TOC entry 2491 (class 2604 OID 317277)
 -- Name: OggettiSubVersion_InfoComboBox Codice; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10842,7 +10874,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_InfoComboBox" ALTER COLUMN "Codice"
 
 
 --
--- TOC entry 2510 (class 2604 OID 317278)
+-- TOC entry 2505 (class 2604 OID 317278)
 -- Name: OggettiSubVersion_ListaInformazioni Codice; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10850,7 +10882,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_ListaInformazioni" ALTER COLUMN "Co
 
 
 --
--- TOC entry 2511 (class 2604 OID 317279)
+-- TOC entry 2506 (class 2604 OID 317279)
 -- Name: OggettiSubVersion_ListaSchede Codice; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10858,7 +10890,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_ListaSchede" ALTER COLUMN "Codice" 
 
 
 --
--- TOC entry 2512 (class 2604 OID 317280)
+-- TOC entry 2507 (class 2604 OID 317280)
 -- Name: OggettiSubVersion_RelazioniSchede CodiceScheda; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10874,7 +10906,7 @@ ALTER TABLE ONLY "public"."OggettiVersion" ALTER COLUMN "Codice" SET DEFAULT "ne
 
 
 --
--- TOC entry 2513 (class 2604 OID 317282)
+-- TOC entry 2508 (class 2604 OID 317282)
 -- Name: OggettiVersion_InfoComboBox Codice; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10882,7 +10914,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_InfoComboBox" ALTER COLUMN "Codice" SE
 
 
 --
--- TOC entry 2527 (class 2604 OID 317283)
+-- TOC entry 2522 (class 2604 OID 317283)
 -- Name: OggettiVersion_ListaInformazioni Codice; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10890,7 +10922,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_ListaInformazioni" ALTER COLUMN "Codic
 
 
 --
--- TOC entry 2528 (class 2604 OID 317284)
+-- TOC entry 2523 (class 2604 OID 317284)
 -- Name: OggettiVersion_ListaSchede Codice; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10898,7 +10930,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_ListaSchede" ALTER COLUMN "Codice" SET
 
 
 --
--- TOC entry 2529 (class 2604 OID 317285)
+-- TOC entry 2524 (class 2604 OID 317285)
 -- Name: OggettiVersion_RelazioniSchede CodiceScheda; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10906,7 +10938,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_RelazioniSchede" ALTER COLUMN "CodiceS
 
 
 --
--- TOC entry 2530 (class 2604 OID 317286)
+-- TOC entry 2525 (class 2604 OID 317286)
 -- Name: Oggetti_InfoComboBox Codice; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10914,7 +10946,7 @@ ALTER TABLE ONLY "public"."Oggetti_InfoComboBox" ALTER COLUMN "Codice" SET DEFAU
 
 
 --
--- TOC entry 2544 (class 2604 OID 317287)
+-- TOC entry 2539 (class 2604 OID 317287)
 -- Name: Oggetti_ListaInformazioni Codice; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10922,7 +10954,7 @@ ALTER TABLE ONLY "public"."Oggetti_ListaInformazioni" ALTER COLUMN "Codice" SET 
 
 
 --
--- TOC entry 2545 (class 2604 OID 317288)
+-- TOC entry 2540 (class 2604 OID 317288)
 -- Name: Oggetti_ListaSchede Codice; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10930,7 +10962,7 @@ ALTER TABLE ONLY "public"."Oggetti_ListaSchede" ALTER COLUMN "Codice" SET DEFAUL
 
 
 --
--- TOC entry 2546 (class 2604 OID 317289)
+-- TOC entry 2541 (class 2604 OID 317289)
 -- Name: Oggetti_RelazioniSchede CodiceScheda; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10938,7 +10970,7 @@ ALTER TABLE ONLY "public"."Oggetti_RelazioniSchede" ALTER COLUMN "CodiceScheda" 
 
 
 --
--- TOC entry 2574 (class 2604 OID 327736)
+-- TOC entry 2569 (class 2604 OID 327736)
 -- Name: PhotogrammetryPhotoDataOggetti Codice; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10946,7 +10978,7 @@ ALTER TABLE ONLY "public"."PhotogrammetryPhotoDataOggetti" ALTER COLUMN "Codice"
 
 
 --
--- TOC entry 2548 (class 2604 OID 327667)
+-- TOC entry 2543 (class 2604 OID 327667)
 -- Name: PhotogrammetryProjectData Codice; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -10990,7 +11022,7 @@ ALTER TABLE ONLY "public"."FileExtra"
 
 
 --
--- TOC entry 2734 (class 2606 OID 378883)
+-- TOC entry 2732 (class 2606 OID 378883)
 -- Name: GisLayers GisLayers-PrimaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10999,7 +11031,7 @@ ALTER TABLE ONLY "public"."GisLayers"
 
 
 --
--- TOC entry 2732 (class 2606 OID 378859)
+-- TOC entry 2730 (class 2606 OID 378859)
 -- Name: GisSettings GisSettings-primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11008,7 +11040,7 @@ ALTER TABLE ONLY "public"."GisSettings"
 
 
 --
--- TOC entry 2736 (class 2606 OID 385951)
+-- TOC entry 2734 (class 2606 OID 385951)
 -- Name: GisTables GisTables-primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11161,16 +11193,16 @@ ALTER TABLE ONLY "public"."Log"
 
 
 --
--- TOC entry 2650 (class 2606 OID 317884)
+-- TOC entry 2736 (class 2606 OID 419066)
 -- Name: MaterialeInterventiSubVersion MaterialeInterventiSubVersion_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY "public"."MaterialeInterventiSubVersion"
-    ADD CONSTRAINT "MaterialeInterventiSubVersion_primaryKey" PRIMARY KEY ("CodiceSubVersion", "URL", "Qualità");
+    ADD CONSTRAINT "MaterialeInterventiSubVersion_primaryKey" PRIMARY KEY ("CodiceInterventiSubVersion", "URL", "Qualità");
 
 
 --
--- TOC entry 2652 (class 2606 OID 317886)
+-- TOC entry 2650 (class 2606 OID 317886)
 -- Name: MaterialeOggetti MaterialeOggetti_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11179,7 +11211,7 @@ ALTER TABLE ONLY "public"."MaterialeOggetti"
 
 
 --
--- TOC entry 2654 (class 2606 OID 317888)
+-- TOC entry 2652 (class 2606 OID 317888)
 -- Name: MaterialeSubVersion MaterialeSubVersion_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11188,7 +11220,7 @@ ALTER TABLE ONLY "public"."MaterialeSubVersion"
 
 
 --
--- TOC entry 2656 (class 2606 OID 317890)
+-- TOC entry 2654 (class 2606 OID 317890)
 -- Name: MaterialeVersioni MaterialeVersioni_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11197,7 +11229,7 @@ ALTER TABLE ONLY "public"."MaterialeVersioni"
 
 
 --
--- TOC entry 2660 (class 2606 OID 317892)
+-- TOC entry 2658 (class 2606 OID 317892)
 -- Name: Modelli3D_3dm_Backup Modelli3D_3dm_Backup_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11206,7 +11238,7 @@ ALTER TABLE ONLY "public"."Modelli3D_3dm_Backup"
 
 
 --
--- TOC entry 2658 (class 2606 OID 317894)
+-- TOC entry 2656 (class 2606 OID 317894)
 -- Name: Modelli3D_3dm Modelli3D_3dm_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11215,7 +11247,7 @@ ALTER TABLE ONLY "public"."Modelli3D_3dm"
 
 
 --
--- TOC entry 2662 (class 2606 OID 317896)
+-- TOC entry 2660 (class 2606 OID 317896)
 -- Name: Modelli3D_HotSpotColor Modelli3D_HotSpotColor_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11233,7 +11265,7 @@ ALTER TABLE ONLY "public"."Modelli3D_LoD"
 
 
 --
--- TOC entry 2668 (class 2606 OID 317900)
+-- TOC entry 2666 (class 2606 OID 317900)
 -- Name: Modelli3D_Texture Modelli3D_Textture_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11251,7 +11283,7 @@ ALTER TABLE ONLY "public"."Modelli3D"
 
 
 --
--- TOC entry 2664 (class 2606 OID 317904)
+-- TOC entry 2662 (class 2606 OID 317904)
 -- Name: Modelli3D_JSON Modelli3d_OggettiJSON_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11260,7 +11292,7 @@ ALTER TABLE ONLY "public"."Modelli3D_JSON"
 
 
 --
--- TOC entry 2666 (class 2606 OID 317906)
+-- TOC entry 2664 (class 2606 OID 317906)
 -- Name: Modelli3D_OBJ Modelli3d_OggettiOBJ-primary-key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11278,7 +11310,7 @@ ALTER TABLE ONLY "public"."Oggetti"
 
 
 --
--- TOC entry 2674 (class 2606 OID 317910)
+-- TOC entry 2672 (class 2606 OID 317910)
 -- Name: OggettiSubVersion_CategorieSchede OggettiSubVersion_CategorieSchede_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11287,7 +11319,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_CategorieSchede"
 
 
 --
--- TOC entry 2676 (class 2606 OID 317912)
+-- TOC entry 2674 (class 2606 OID 317912)
 -- Name: OggettiSubVersion_InfoComboBox OggettiSubVersion_InfoComboBox_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11296,7 +11328,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_InfoComboBox"
 
 
 --
--- TOC entry 2678 (class 2606 OID 317914)
+-- TOC entry 2676 (class 2606 OID 317914)
 -- Name: OggettiSubVersion_ListaInformazioni OggettiSubVersion_ListaInformazioni_UniqueCodiceTitoloCampo; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11305,7 +11337,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_ListaInformazioni"
 
 
 --
--- TOC entry 2680 (class 2606 OID 317916)
+-- TOC entry 2678 (class 2606 OID 317916)
 -- Name: OggettiSubVersion_ListaInformazioni OggettiSubVersion_ListaInformazioni_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11314,7 +11346,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_ListaInformazioni"
 
 
 --
--- TOC entry 2682 (class 2606 OID 317918)
+-- TOC entry 2680 (class 2606 OID 317918)
 -- Name: OggettiSubVersion_ListaSchede OggettiSubVersion_ListaSchede_TitoloUnique; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11323,7 +11355,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_ListaSchede"
 
 
 --
--- TOC entry 2684 (class 2606 OID 317920)
+-- TOC entry 2682 (class 2606 OID 317920)
 -- Name: OggettiSubVersion_ListaSchede OggettiSubVersion_ListaSchede_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11332,7 +11364,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_ListaSchede"
 
 
 --
--- TOC entry 2686 (class 2606 OID 317922)
+-- TOC entry 2684 (class 2606 OID 317922)
 -- Name: OggettiSubVersion_RelazioniSchede OggettiSubVersion_RelazioniSchede_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11341,7 +11373,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_RelazioniSchede"
 
 
 --
--- TOC entry 2688 (class 2606 OID 317924)
+-- TOC entry 2686 (class 2606 OID 317924)
 -- Name: OggettiSubVersion_Schede OggettiSubVersion_Schede_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11350,7 +11382,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_Schede"
 
 
 --
--- TOC entry 2690 (class 2606 OID 317926)
+-- TOC entry 2688 (class 2606 OID 317926)
 -- Name: OggettiVersion_CategorieSchede OggettiVersion_CategorieSchede_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11359,7 +11391,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_CategorieSchede"
 
 
 --
--- TOC entry 2692 (class 2606 OID 317928)
+-- TOC entry 2690 (class 2606 OID 317928)
 -- Name: OggettiVersion_InfoComboBox OggettiVersion_InfoComboBox_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11368,7 +11400,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_InfoComboBox"
 
 
 --
--- TOC entry 2694 (class 2606 OID 317930)
+-- TOC entry 2692 (class 2606 OID 317930)
 -- Name: OggettiVersion_ListaInformazioni OggettiVersion_ListaInformazioni_UniqueCodiceTitoloCampo; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11377,7 +11409,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_ListaInformazioni"
 
 
 --
--- TOC entry 2696 (class 2606 OID 317932)
+-- TOC entry 2694 (class 2606 OID 317932)
 -- Name: OggettiVersion_ListaInformazioni OggettiVersion_ListaInformazioni_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11386,7 +11418,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_ListaInformazioni"
 
 
 --
--- TOC entry 2698 (class 2606 OID 317934)
+-- TOC entry 2696 (class 2606 OID 317934)
 -- Name: OggettiVersion_ListaSchede OggettiVersion_ListaSchede_TitoloUnique; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11395,7 +11427,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_ListaSchede"
 
 
 --
--- TOC entry 2700 (class 2606 OID 317936)
+-- TOC entry 2698 (class 2606 OID 317936)
 -- Name: OggettiVersion_ListaSchede OggettiVersion_ListaSchede_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11404,7 +11436,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_ListaSchede"
 
 
 --
--- TOC entry 2702 (class 2606 OID 317938)
+-- TOC entry 2700 (class 2606 OID 317938)
 -- Name: OggettiVersion_RelazioniSchede OggettiVersion_RelazioniSchede_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11413,7 +11445,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_RelazioniSchede"
 
 
 --
--- TOC entry 2704 (class 2606 OID 317940)
+-- TOC entry 2702 (class 2606 OID 317940)
 -- Name: OggettiVersion_Schede OggettiVersion_Schede_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11422,7 +11454,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_Schede"
 
 
 --
--- TOC entry 2706 (class 2606 OID 317942)
+-- TOC entry 2704 (class 2606 OID 317942)
 -- Name: Oggetti_CategorieSchede Oggetti_CategorieSchede_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11431,7 +11463,7 @@ ALTER TABLE ONLY "public"."Oggetti_CategorieSchede"
 
 
 --
--- TOC entry 2708 (class 2606 OID 317944)
+-- TOC entry 2706 (class 2606 OID 317944)
 -- Name: Oggetti_InfoComboBox Oggetti_InfoComboBox_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11440,7 +11472,7 @@ ALTER TABLE ONLY "public"."Oggetti_InfoComboBox"
 
 
 --
--- TOC entry 2710 (class 2606 OID 317946)
+-- TOC entry 2708 (class 2606 OID 317946)
 -- Name: Oggetti_ListaInformazioni Oggetti_ListaInformazioni_UniqueCodiceTitoloCampo; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11449,7 +11481,7 @@ ALTER TABLE ONLY "public"."Oggetti_ListaInformazioni"
 
 
 --
--- TOC entry 2712 (class 2606 OID 317948)
+-- TOC entry 2710 (class 2606 OID 317948)
 -- Name: Oggetti_ListaInformazioni Oggetti_ListaInformazioni_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11458,7 +11490,7 @@ ALTER TABLE ONLY "public"."Oggetti_ListaInformazioni"
 
 
 --
--- TOC entry 2714 (class 2606 OID 317950)
+-- TOC entry 2712 (class 2606 OID 317950)
 -- Name: Oggetti_ListaSchede Oggetti_ListaSchede_TitoloUnique; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11467,7 +11499,7 @@ ALTER TABLE ONLY "public"."Oggetti_ListaSchede"
 
 
 --
--- TOC entry 2716 (class 2606 OID 317952)
+-- TOC entry 2714 (class 2606 OID 317952)
 -- Name: Oggetti_ListaSchede Oggetti_ListaSchede_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11476,7 +11508,7 @@ ALTER TABLE ONLY "public"."Oggetti_ListaSchede"
 
 
 --
--- TOC entry 2718 (class 2606 OID 317954)
+-- TOC entry 2716 (class 2606 OID 317954)
 -- Name: Oggetti_RelazioniSchede Oggetti_RelazioniSchede_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11485,7 +11517,7 @@ ALTER TABLE ONLY "public"."Oggetti_RelazioniSchede"
 
 
 --
--- TOC entry 2720 (class 2606 OID 317956)
+-- TOC entry 2718 (class 2606 OID 317956)
 -- Name: Oggetti_Schede Oggetti_Schede_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11494,7 +11526,7 @@ ALTER TABLE ONLY "public"."Oggetti_Schede"
 
 
 --
--- TOC entry 2670 (class 2606 OID 317958)
+-- TOC entry 2668 (class 2606 OID 317958)
 -- Name: OggettiSubVersion Oggetti_SubVersion-unicità; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11503,7 +11535,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion"
 
 
 --
--- TOC entry 2672 (class 2606 OID 317960)
+-- TOC entry 2670 (class 2606 OID 317960)
 -- Name: OggettiSubVersion Oggetti_SubVersion_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11539,7 +11571,7 @@ ALTER TABLE ONLY "public"."Oggetti"
 
 
 --
--- TOC entry 2730 (class 2606 OID 327754)
+-- TOC entry 2728 (class 2606 OID 327754)
 -- Name: PhotogrammetryPhotoDataOggetti PhotogrammetryPhotoData-PrimaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11548,7 +11580,7 @@ ALTER TABLE ONLY "public"."PhotogrammetryPhotoDataOggetti"
 
 
 --
--- TOC entry 2726 (class 2606 OID 327696)
+-- TOC entry 2724 (class 2606 OID 327696)
 -- Name: PhotogrammetryProjectData PhotogrammetryProjectData-PrimaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11557,7 +11589,7 @@ ALTER TABLE ONLY "public"."PhotogrammetryProjectData"
 
 
 --
--- TOC entry 2728 (class 2606 OID 327801)
+-- TOC entry 2726 (class 2606 OID 327801)
 -- Name: PhotogrammetryProjectData PhotogrammetryProjectData-Unique; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11566,7 +11598,7 @@ ALTER TABLE ONLY "public"."PhotogrammetryProjectData"
 
 
 --
--- TOC entry 2722 (class 2606 OID 317968)
+-- TOC entry 2720 (class 2606 OID 317968)
 -- Name: Settings Settings-primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11575,7 +11607,7 @@ ALTER TABLE ONLY "public"."Settings"
 
 
 --
--- TOC entry 2724 (class 2606 OID 317970)
+-- TOC entry 2722 (class 2606 OID 317970)
 -- Name: Utenti Utenti_primaryKey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11728,16 +11760,16 @@ ALTER TABLE ONLY "public"."InterventiSubVersion_Schede"
 
 
 --
--- TOC entry 2757 (class 2606 OID 318051)
--- Name: MaterialeInterventiSubVersion MaterialeInterventiSubVersion_Verifica_Codice_SubVersion; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 2794 (class 2606 OID 419067)
+-- Name: MaterialeInterventiSubVersion MaterialeInterventiSubVersion_CodiceInterventiSubVersion; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY "public"."MaterialeInterventiSubVersion"
-    ADD CONSTRAINT "MaterialeInterventiSubVersion_Verifica_Codice_SubVersion" FOREIGN KEY ("CodiceSubVersion") REFERENCES "public"."InterventiSubVersion"("Codice") ON UPDATE CASCADE ON DELETE CASCADE;
+    ADD CONSTRAINT "MaterialeInterventiSubVersion_CodiceInterventiSubVersion" FOREIGN KEY ("CodiceInterventiSubVersion") REFERENCES "public"."InterventiSubVersion"("Codice") ON UPDATE CASCADE ON DELETE CASCADE;
 
 
 --
--- TOC entry 2759 (class 2606 OID 318056)
+-- TOC entry 2758 (class 2606 OID 318056)
 -- Name: MaterialeSubVersion MaterialeSubVersion_Verifica_Codice_SubVersion; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11746,7 +11778,7 @@ ALTER TABLE ONLY "public"."MaterialeSubVersion"
 
 
 --
--- TOC entry 2760 (class 2606 OID 318061)
+-- TOC entry 2759 (class 2606 OID 318061)
 -- Name: MaterialeVersioni MaterialeVersioni_Verifica_Codice_Versione; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11755,7 +11787,7 @@ ALTER TABLE ONLY "public"."MaterialeVersioni"
 
 
 --
--- TOC entry 2761 (class 2606 OID 318066)
+-- TOC entry 2760 (class 2606 OID 318066)
 -- Name: Modelli3D_3dm Modelli3D_3dm-key-Modelli3D_LoD; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11764,7 +11796,7 @@ ALTER TABLE ONLY "public"."Modelli3D_3dm"
 
 
 --
--- TOC entry 2762 (class 2606 OID 318071)
+-- TOC entry 2761 (class 2606 OID 318071)
 -- Name: Modelli3D_3dm_Backup Modelli3D_3dm_Backup-key-Modelli3D_LoD; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11773,7 +11805,7 @@ ALTER TABLE ONLY "public"."Modelli3D_3dm_Backup"
 
 
 --
--- TOC entry 2763 (class 2606 OID 318076)
+-- TOC entry 2762 (class 2606 OID 318076)
 -- Name: Modelli3D_HotSpotColor Modelli3D_HotSpotColor-refModelli3D; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11791,7 +11823,7 @@ ALTER TABLE ONLY "public"."Modelli3D_LoD"
 
 
 --
--- TOC entry 2764 (class 2606 OID 318086)
+-- TOC entry 2763 (class 2606 OID 318086)
 -- Name: Modelli3D_JSON Modelli3D_OggettiJSON-key-Modelli3D_LoD; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11800,7 +11832,7 @@ ALTER TABLE ONLY "public"."Modelli3D_JSON"
 
 
 --
--- TOC entry 2765 (class 2606 OID 318091)
+-- TOC entry 2764 (class 2606 OID 318091)
 -- Name: Modelli3D_OBJ Modelli3D_OggettiOBJ-key-Modelli3D_LoD; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11809,7 +11841,7 @@ ALTER TABLE ONLY "public"."Modelli3D_OBJ"
 
 
 --
--- TOC entry 2766 (class 2606 OID 318096)
+-- TOC entry 2765 (class 2606 OID 318096)
 -- Name: Modelli3D_Texture Modelli3D_Texture-refCodiceModello; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11818,7 +11850,7 @@ ALTER TABLE ONLY "public"."Modelli3D_Texture"
 
 
 --
--- TOC entry 2769 (class 2606 OID 318101)
+-- TOC entry 2768 (class 2606 OID 318101)
 -- Name: OggettiSubVersion_CategorieSchede OggettiSubVersion_CategorieSchede_refCategorie; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11827,7 +11859,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_CategorieSchede"
 
 
 --
--- TOC entry 2770 (class 2606 OID 318106)
+-- TOC entry 2769 (class 2606 OID 318106)
 -- Name: OggettiSubVersion_CategorieSchede OggettiSubVersion_CategorieSchede_refSubVersion_ListaSchede; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11836,7 +11868,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_CategorieSchede"
 
 
 --
--- TOC entry 2771 (class 2606 OID 318111)
+-- TOC entry 2770 (class 2606 OID 318111)
 -- Name: OggettiSubVersion_InfoComboBox OggettiSubVersion_InfoComboBox-refSubVersion_ListaInformazioni; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11845,7 +11877,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_InfoComboBox"
 
 
 --
--- TOC entry 2772 (class 2606 OID 318116)
+-- TOC entry 2771 (class 2606 OID 318116)
 -- Name: OggettiSubVersion_ListaInformazioni OggettiSubVersion_ListaInformazioni_refCodiceTitolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11854,7 +11886,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_ListaInformazioni"
 
 
 --
--- TOC entry 2773 (class 2606 OID 318121)
+-- TOC entry 2772 (class 2606 OID 318121)
 -- Name: OggettiSubVersion_RelazioniSchede OggettiSubVersion_RelazioniSchede_refOggettiSubVersion; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11863,7 +11895,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_RelazioniSchede"
 
 
 --
--- TOC entry 2774 (class 2606 OID 318126)
+-- TOC entry 2773 (class 2606 OID 318126)
 -- Name: OggettiSubVersion_RelazioniSchede OggettiSubVersion_RelazioniSchede_refSubVersion_ListaSchede; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11872,7 +11904,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_RelazioniSchede"
 
 
 --
--- TOC entry 2775 (class 2606 OID 318131)
+-- TOC entry 2774 (class 2606 OID 318131)
 -- Name: OggettiSubVersion_Schede OggettiSubVersion_Schede_refSubVersion_InfoComboBox; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11881,7 +11913,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_Schede"
 
 
 --
--- TOC entry 2776 (class 2606 OID 318136)
+-- TOC entry 2775 (class 2606 OID 318136)
 -- Name: OggettiSubVersion_Schede OggettiSubVersion_Schede_refSubVersion_ListaInformazioni; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11890,7 +11922,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion_Schede"
 
 
 --
--- TOC entry 2777 (class 2606 OID 318141)
+-- TOC entry 2776 (class 2606 OID 318141)
 -- Name: OggettiVersion_CategorieSchede OggettiVersion_CategorieSchede_refCategorie; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11899,7 +11931,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_CategorieSchede"
 
 
 --
--- TOC entry 2778 (class 2606 OID 318146)
+-- TOC entry 2777 (class 2606 OID 318146)
 -- Name: OggettiVersion_CategorieSchede OggettiVersion_CategorieSchede_refOggettiVersion_ListaSchede; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11908,7 +11940,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_CategorieSchede"
 
 
 --
--- TOC entry 2779 (class 2606 OID 318151)
+-- TOC entry 2778 (class 2606 OID 318151)
 -- Name: OggettiVersion_InfoComboBox OggettiVersion_InfoComboBox-refOggettiVersion_ListaInformazioni; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11917,7 +11949,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_InfoComboBox"
 
 
 --
--- TOC entry 2780 (class 2606 OID 318156)
+-- TOC entry 2779 (class 2606 OID 318156)
 -- Name: OggettiVersion_ListaInformazioni OggettiVersion_ListaInformazioni_refCodiceTitolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11926,7 +11958,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_ListaInformazioni"
 
 
 --
--- TOC entry 2781 (class 2606 OID 318161)
+-- TOC entry 2780 (class 2606 OID 318161)
 -- Name: OggettiVersion_RelazioniSchede OggettiVersion_RelazioniSchede_refOggettiVersion; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11935,7 +11967,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_RelazioniSchede"
 
 
 --
--- TOC entry 2782 (class 2606 OID 318166)
+-- TOC entry 2781 (class 2606 OID 318166)
 -- Name: OggettiVersion_RelazioniSchede OggettiVersion_RelazioniSchede_refOggettiVersion_ListaSchede; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11944,7 +11976,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_RelazioniSchede"
 
 
 --
--- TOC entry 2783 (class 2606 OID 318171)
+-- TOC entry 2782 (class 2606 OID 318171)
 -- Name: OggettiVersion_Schede OggettiVersion_Schede_refOggettiVersion_InfoComboBox; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11953,7 +11985,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_Schede"
 
 
 --
--- TOC entry 2784 (class 2606 OID 318176)
+-- TOC entry 2783 (class 2606 OID 318176)
 -- Name: OggettiVersion_Schede OggettiVersion_Schede_refOggettiVersion_ListaInformazioni; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11962,7 +11994,7 @@ ALTER TABLE ONLY "public"."OggettiVersion_Schede"
 
 
 --
--- TOC entry 2785 (class 2606 OID 318181)
+-- TOC entry 2784 (class 2606 OID 318181)
 -- Name: Oggetti_CategorieSchede Oggetti_CategorieSchede_refCategorie; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11971,7 +12003,7 @@ ALTER TABLE ONLY "public"."Oggetti_CategorieSchede"
 
 
 --
--- TOC entry 2786 (class 2606 OID 318186)
+-- TOC entry 2785 (class 2606 OID 318186)
 -- Name: Oggetti_CategorieSchede Oggetti_CategorieSchede_refOggetti_ListaSchede; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11980,7 +12012,7 @@ ALTER TABLE ONLY "public"."Oggetti_CategorieSchede"
 
 
 --
--- TOC entry 2787 (class 2606 OID 318191)
+-- TOC entry 2786 (class 2606 OID 318191)
 -- Name: Oggetti_InfoComboBox Oggetti_InfoComboBox-refOggetti_ListaInformazioni; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11989,7 +12021,7 @@ ALTER TABLE ONLY "public"."Oggetti_InfoComboBox"
 
 
 --
--- TOC entry 2788 (class 2606 OID 318196)
+-- TOC entry 2787 (class 2606 OID 318196)
 -- Name: Oggetti_ListaInformazioni Oggetti_ListaInformazioni_refCodiceTitolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -11998,7 +12030,7 @@ ALTER TABLE ONLY "public"."Oggetti_ListaInformazioni"
 
 
 --
--- TOC entry 2789 (class 2606 OID 318201)
+-- TOC entry 2788 (class 2606 OID 318201)
 -- Name: Oggetti_RelazioniSchede Oggetti_RelazioniSchede_refOggetti; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12007,7 +12039,7 @@ ALTER TABLE ONLY "public"."Oggetti_RelazioniSchede"
 
 
 --
--- TOC entry 2790 (class 2606 OID 318206)
+-- TOC entry 2789 (class 2606 OID 318206)
 -- Name: Oggetti_RelazioniSchede Oggetti_RelazioniSchede_refOggetti_ListaSchede; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12016,7 +12048,7 @@ ALTER TABLE ONLY "public"."Oggetti_RelazioniSchede"
 
 
 --
--- TOC entry 2791 (class 2606 OID 318211)
+-- TOC entry 2790 (class 2606 OID 318211)
 -- Name: Oggetti_Schede Oggetti_Schede_refOggetti_InfoComboBox; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12025,7 +12057,7 @@ ALTER TABLE ONLY "public"."Oggetti_Schede"
 
 
 --
--- TOC entry 2792 (class 2606 OID 318216)
+-- TOC entry 2791 (class 2606 OID 318216)
 -- Name: Oggetti_Schede Oggetti_Schede_refOggetti_ListaInformazioni; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12034,7 +12066,7 @@ ALTER TABLE ONLY "public"."Oggetti_Schede"
 
 
 --
--- TOC entry 2767 (class 2606 OID 318221)
+-- TOC entry 2766 (class 2606 OID 318221)
 -- Name: OggettiSubVersion Oggetti_SubVersion-keu-Oggetti; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12043,7 +12075,7 @@ ALTER TABLE ONLY "public"."OggettiSubVersion"
 
 
 --
--- TOC entry 2768 (class 2606 OID 318226)
+-- TOC entry 2767 (class 2606 OID 318226)
 -- Name: OggettiSubVersion Oggetti_SubVersion-key-Oggetti_Versioni; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12079,7 +12111,7 @@ ALTER TABLE ONLY "public"."Oggetti"
 
 
 --
--- TOC entry 2794 (class 2606 OID 327755)
+-- TOC entry 2793 (class 2606 OID 327755)
 -- Name: PhotogrammetryPhotoDataOggetti PhotogrammetryPhotoData-RefPhotogrammetryProjectData; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12088,7 +12120,7 @@ ALTER TABLE ONLY "public"."PhotogrammetryPhotoDataOggetti"
 
 
 --
--- TOC entry 2793 (class 2606 OID 327697)
+-- TOC entry 2792 (class 2606 OID 327697)
 -- Name: PhotogrammetryProjectData PhotogrammetryProjectData-RefModelli3D; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12097,7 +12129,7 @@ ALTER TABLE ONLY "public"."PhotogrammetryProjectData"
 
 
 --
--- TOC entry 2758 (class 2606 OID 318246)
+-- TOC entry 2757 (class 2606 OID 318246)
 -- Name: MaterialeOggetti Verifica_Codice_oggetto; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12105,7 +12137,7 @@ ALTER TABLE ONLY "public"."MaterialeOggetti"
     ADD CONSTRAINT "Verifica_Codice_oggetto" FOREIGN KEY ("CodiceOggetto") REFERENCES "public"."Oggetti"("Codice") ON UPDATE CASCADE ON DELETE CASCADE;
 
 
--- Completed on 2020-11-19 17:19:23
+-- Completed on 2021-05-05 02:28:57 CEST
 
 --
 -- PostgreSQL database dump complete
